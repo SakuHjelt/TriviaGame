@@ -1,7 +1,11 @@
 .triviaQuestionDiv {
     font-size: 2em;
-    color: green;
-    
+    color: rgb(0, 204, 0);
+}
+
+.answerLeft {
+    padding: 20px;
+    margin-right: 50px;
 }
 
 .questionTitle{
