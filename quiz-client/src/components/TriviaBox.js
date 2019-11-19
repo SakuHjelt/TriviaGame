@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import '../style/TriviaBox.css';
 import TriviaQuestion from './TriviaQuestion';
 import { fetchData } from '../serviceClient';
@@ -20,11 +20,15 @@ const TriviaBox = () => {
         getData();
     }, [])
 
-    return ( <div>
-        <h1>
-             Arnold Schwarzenegger Quiz </h1> <div className = "questionbox" >
-        <TriviaQuestion data = { data }/> <p> { questions } </p> </div> </div>
-    )
+  return (
+    <div>
+     <h1>Arnold Schwarzenegger Quiz</h1>
+      <div className="questionbox">
+      <TriviaQuestion data={data}/>
+      <p>{questions}</p>
+      </div>
+    </div>
+  )
 };
 
 export default TriviaBox;

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import '../style/Intro.css'
 import Arnold from '../pics/arnold.jpg'
 import IntroMusic from '../sounds/introVer1.mp3'
+import { Link } from 'react-router-dom';
 
 export default class Intro extends Component {
     render() {
@@ -28,7 +29,7 @@ export default class Intro extends Component {
             <br />
             <span className="introSpan">QUIZ</span>
         </h1>
-        <button className="introButton"><span className="introSpan">PLAY</span></button>
+        <Link to="/quiz"><button className="introButton"><span className="introSpan">PLAY</span></button></Link>
     </section>
             </div>
         )
