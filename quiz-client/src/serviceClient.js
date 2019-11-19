@@ -1,9 +1,6 @@
 async function fetchData(callback) {
-  const res = await fetch("/");
-  res
-    .json()
-    .then(res => callback(res))
-    .catch(err => console.log(err));
+  const res = await fetch("/api/questions");
+  return res.json();
 };
 
 export { fetchData };
