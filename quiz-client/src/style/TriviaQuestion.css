@@ -1,6 +1,10 @@
+
+
 .triviaQuestionDiv {
-    font-size: 2em;
-    color: rgb(0, 204, 0);
+    padding: 10px;
+    font-size: 1.8em;
+    color: green;
+    text-align: left;
 }
 
 .answerLeft {
@@ -8,18 +12,48 @@
     margin-right: 50px;
 }
 
-.questionTitle{
-   
+.questionTitle {
+    float: right;
+    font-size: 2em;
+    width: 100%;
+    height: 500px;
+    top: 110%;
+    left: 59%;
+    position: absolute;
+    transform: translate(-50%, -50%);
 
 }
 
 .checkboxLetter {
-
+    font-size: 4em;
 }
 
 .triviaCheckbox {
     height: 2em;
     width: 2em;
-    
+    ;
 }
 
+
+
+.questionNumber {
+    color: red;
+    background: rgb(57, 57, 57);
+    animation: blinker 0.8s linear infinite;
+  }
+  @keyframes blinker {
+    100% {
+      opacity: 0;
+    }
+  }
+
+.allChecks {
+    font-size: 0.7em;
+    width: 100%;
+    height: 500px;
+    top: 80%;
+    left: 59%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    
+}

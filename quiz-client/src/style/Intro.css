@@ -1,48 +1,4 @@
-/* OIKEAT KÄÄNTYMISAJAT SUHTEESSA MUSIIKKIIN */
 
-
-/*.introH1 .introSpan:nth-child(1) {
-    animation-delay: 6.1s;
-}
-.introH1 .introSpan:nth-child(2) {
-    animation-delay: 6.1s;
-}
-.introH1 .introSpan:nth-child(3) {
-    animation-delay: 6.2s;
-}
-.introH1 .introSpan:nth-child(4) {
-    animation-delay: 6.2s;
-}
-.introH1 .introSpan:nth-child(5) {
-    animation-delay: 7.0s;
-}
-.introH1 .introSpan:nth-child(6) {
-    animation-delay: 7.2s;
-}
-.introH1 .introSpan:nth-child(7) {
-    animation-delay: 8.0s;
-}
-.introH1 .introSpan:nth-child(8) {
-    animation-delay: 9.1s;
-}
-.introH1 .introSpan:nth-child(9) {
-    animation-delay: 9.2s;
-}
-.introH1 .introSpan:nth-child(10) {
-    animation-delay: 9.2s;
-}
-.introH1 .introSpan:nth-child(11) {
-    animation-delay: 10.0s;
-}
-.introH1 .introSpan:nth-child(12) {
-    animation-delay: 10.0s;
-}
-.introH1 .introSpan:nth-child(13) {
-    animation-delay: 10.2s;
-}
-.introH1 .introSpan:nth-child(14) {
-    animation-delay: 10.2s;
-} */
 
 body {
     margin: 0;
@@ -89,53 +45,58 @@ body {
 }
 
 
-/* NOPEUTETUT KÄÄNTYMISAJAT KEHITYKSEN AJAKSI */
 
 .introH1 .introSpan:nth-child(1) {
-    animation-delay: 1s;
+    animation-delay: 6.1s;
 }
 .introH1 .introSpan:nth-child(2) {
-    animation-delay: 1.5s;
+    animation-delay: 6.1s;
 }
 .introH1 .introSpan:nth-child(3) {
-    animation-delay: 2s;
+    animation-delay: 6.2s;
 }
 .introH1 .introSpan:nth-child(4) {
-    animation-delay: 2.5s;
+    animation-delay: 7.0s;
 }
 .introH1 .introSpan:nth-child(5) {
-    animation-delay: 3s;
+    animation-delay: 7.0s;
 }
 .introH1 .introSpan:nth-child(6) {
-    animation-delay: 3.5s;
+    animation-delay: 7.2s;
 }
 .introH1 .introSpan:nth-child(7) {
-    animation-delay: 4s;
-}
-.introH1 .introSpan:nth-child(8) {
-    animation-delay: 4.5s;
-}
-.introH1 .introSpan:nth-child(9) {
-    animation-delay: 5s;
-}
-.introH1 .introSpan:nth-child(10) {
-    animation-delay: 5.5s;
-}
-.introH1 .introSpan:nth-child(11) {
-    animation-delay: 6s;
-}
-.introH1 .introSpan:nth-child(12) {
-    animation-delay: 6.5s;
-}
-.introH1 .introSpan:nth-child(13) {
-    animation-delay: 7s;
-}
-.introH1 .introSpan:nth-child(14) {
     animation-delay: 7.5s;
 }
+.introH1 .introSpan:nth-child(8) {
+    animation-delay: 9.1s;
+}
+.introH1 .introSpan:nth-child(9) {
+    animation-delay: 9.2s;
+}
+.introH1 .introSpan:nth-child(10) {
+    animation-delay: 9.2s;
+}
+.introH1 .introSpan:nth-child(11) {
+    animation-delay: 10.0s;
+}
+.introH1 .introSpan:nth-child(12) {
+    animation-delay: 10.0s;
+}
+.introH1 .introSpan:nth-child(13) {
+    animation-delay: 10.6s;
+}
+.introH1 .introSpan:nth-child(14) {
+    animation-delay: 10.6s;
+}
 
-.introSpan {
-    color: rgb(15, 15, 15);
+.introH1Quiz{
+    color: black;
+    animation-delay: 11.1s;
+}
+.introH1Quiz span {
+    animation: animate 11s linear forwards;
+}
+.intriH1Quiz span:nth-child(1){
     animation-delay: 11.1s;
 }
 
@@ -144,7 +105,7 @@ body {
     height: 600px;
     display: inline-block;
     animation-delay: 3s;
-    animation: fadeIn 16s linear forwards;
+    animation: fadeIn 12s linear forwards;
 }
 
 @keyframes fadeIn {
@@ -152,7 +113,7 @@ body {
         opacity: 0;
     }
     100% {
-        opacity: 0.15;
+        opacity: 0.8;
     }
 }
 
@@ -169,7 +130,7 @@ body {
     border: none;
     cursor: crosshair;
     text-align: center;
-    font-size: 2.3em;
+    font-size: 3em;
     font-family: 'Terminator Cyr Semi-expanded Bold', arial;
     letter-spacing: 0.2em;
     color: black;
@@ -181,5 +142,5 @@ body {
 }
 
 .introButton span:nth-child(1) {
-    animation-delay: 11.1s;
+    animation-delay: 10.8s;
 }
