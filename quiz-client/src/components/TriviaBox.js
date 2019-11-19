@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import './TriviaBox.css';
+import '../style/TriviaBox.css';
 import TriviaQuestion from './TriviaQuestion';
 import {fetchData} from '../serviceClient';
 
@@ -24,7 +24,6 @@ const TriviaBox = () => {
 
   return (
     <div>
-      <h1>Arnold Schwarzenegger Quiz</h1>
       <div className="questionbox">
       <TriviaQuestion data={data}/>
       <p>{questions}</p>
