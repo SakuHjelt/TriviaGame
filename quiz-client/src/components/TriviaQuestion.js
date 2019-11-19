@@ -16,18 +16,29 @@ const TriviaQuestion = ({ data }) => {
       <span className="questionTitle"> {data[0].question}</span>
       <br/>
       <div className="allChecks">
-        
-      <label for="CheckA" className="checkboxLetter">A</label>
-      <input name="checkA" type="checkbox" className="triviaCheckbox"/><span className="answerText">{data[0].choices[0]}</span>
-     
-      <label for="CheckB" className="checkboxLetter">B</label>
-      <input name="checkB" type="checkbox" className="triviaCheckbox"/><span className="answerText">{data[0].choices[1]}</span>
+      
       <br/>
-      <label for="CheckC" className="checkboxLetter">C</label>
-      <input name="checkC" type="checkbox" className="triviaCheckbox"/><span className="answerText">{data[0].choices[2]}</span>
+        
+      <span className="answerLeft">
+        <label for="CheckA" className="checkboxLetter">A</label>
+        <input name="checkA" type="checkbox" className="triviaCheckbox" /><span className="answerText">{data[0].wrong1}</span>
+      </span>
 
-      <label for="CheckD" className="checkboxLetter">D</label>
-      <input name="checkD" type="checkbox" className="triviaCheckbox"/><span className="answerText">{data[0].choices[3]}</span>
+      <span className="answer">
+        <label for="CheckB" className="checkboxLetter">B</label>
+        <input name="checkB" type="checkbox" className="triviaCheckbox" /><span className="answerText">{data[0].wrong2}</span>
+      </span>
+
+      <br />
+      <span className="answerLeft">
+        <label for="CheckC" className="checkboxLetter">C</label>
+        <input name="checkC" type="checkbox" className="triviaCheckbox" /><span className="answerText">{data[0].wrong3}</span>
+      </span>
+
+      <span className="answer">
+        <label for="CheckD" className="checkboxLetter">D</label>
+        <input name="checkD" type="checkbox" className="triviaCheckbox" /><span className="answerText">{data[0].correct}</span>
+      </span>
     </div>
     </div>
   )
