@@ -5,7 +5,11 @@
     font-size: 1.8em;
     color: green;
     text-align: left;
-    
+}
+
+.answerLeft {
+    padding: 20px;
+    margin-right: 50px;
 }
 
 .questionTitle {
