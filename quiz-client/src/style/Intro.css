@@ -1,59 +1,46 @@
 /* OIKEAT KÄÄNTYMISAJAT SUHTEESSA MUSIIKKIIN */
 
 
-/* h1 span:nth-child(1) {
+/*.introH1 .introSpan:nth-child(1) {
     animation-delay: 6.1s;
 }
-
-h1 span:nth-child(2) {
+.introH1 .introSpan:nth-child(2) {
     animation-delay: 6.1s;
 }
-
-h1 span:nth-child(3) {
+.introH1 .introSpan:nth-child(3) {
     animation-delay: 6.2s;
 }
-
-h1 span:nth-child(4) {
+.introH1 .introSpan:nth-child(4) {
     animation-delay: 6.2s;
 }
-
-h1 span:nth-child(5) {
+.introH1 .introSpan:nth-child(5) {
     animation-delay: 7.0s;
 }
-
-h1 span:nth-child(6) {
+.introH1 .introSpan:nth-child(6) {
     animation-delay: 7.2s;
 }
-
-h1 span:nth-child(7) {
+.introH1 .introSpan:nth-child(7) {
     animation-delay: 8.0s;
 }
-
-h1 span:nth-child(8) {
+.introH1 .introSpan:nth-child(8) {
     animation-delay: 9.1s;
 }
-
-h1 span:nth-child(9) {
+.introH1 .introSpan:nth-child(9) {
     animation-delay: 9.2s;
 }
-
-h1 span:nth-child(10) {
+.introH1 .introSpan:nth-child(10) {
     animation-delay: 9.2s;
 }
-
-h1 span:nth-child(11) {
+.introH1 .introSpan:nth-child(11) {
     animation-delay: 10.0s;
 }
-
-h1 span:nth-child(12) {
+.introH1 .introSpan:nth-child(12) {
     animation-delay: 10.0s;
 }
-
-h1 span:nth-child(13) {
+.introH1 .introSpan:nth-child(13) {
     animation-delay: 10.2s;
 }
-
-h1 span:nth-child(14) {
+.introH1 .introSpan:nth-child(14) {
     animation-delay: 10.2s;
 } */
 
@@ -63,12 +50,12 @@ body {
     overflow: hidden;
 }
 
-section {
+.introSection {
     height: 100vh;
     background: black;
 }
 
-h1 {
+.introH1 {
     margin: 0;
     padding: 0;
     position: absolute;
@@ -82,7 +69,7 @@ h1 {
     color: black;
 }
 
-h1 span {
+.introH1 .introSpan {
     display: inline-block;
     animation: animate 0.5s linear forwards;
 }
@@ -104,68 +91,55 @@ h1 span {
 
 /* NOPEUTETUT KÄÄNTYMISAJAT KEHITYKSEN AJAKSI */
 
-h1 span:nth-child(1) {
+.introH1 .introSpan:nth-child(1) {
     animation-delay: 1s;
 }
-
-h1 span:nth-child(2) {
+.introH1 .introSpan:nth-child(2) {
     animation-delay: 1.5s;
 }
-
-h1 span:nth-child(3) {
+.introH1 .introSpan:nth-child(3) {
     animation-delay: 2s;
 }
-
-h1 span:nth-child(4) {
+.introH1 .introSpan:nth-child(4) {
     animation-delay: 2.5s;
 }
-
-h1 span:nth-child(5) {
+.introH1 .introSpan:nth-child(5) {
     animation-delay: 3s;
 }
-
-h1 span:nth-child(6) {
+.introH1 .introSpan:nth-child(6) {
     animation-delay: 3.5s;
 }
-
-h1 span:nth-child(7) {
+.introH1 .introSpan:nth-child(7) {
     animation-delay: 4s;
 }
-
-h1 span:nth-child(8) {
+.introH1 .introSpan:nth-child(8) {
     animation-delay: 4.5s;
 }
-
-h1 span:nth-child(9) {
+.introH1 .introSpan:nth-child(9) {
     animation-delay: 5s;
 }
-
-h1 span:nth-child(10) {
+.introH1 .introSpan:nth-child(10) {
     animation-delay: 5.5s;
 }
-
-h1 span:nth-child(11) {
+.introH1 .introSpan:nth-child(11) {
     animation-delay: 6s;
 }
-
-h1 span:nth-child(12) {
+.introH1 .introSpan:nth-child(12) {
     animation-delay: 6.5s;
 }
-
-h1 span:nth-child(13) {
+.introH1 .introSpan:nth-child(13) {
     animation-delay: 7s;
 }
-
-h1 span:nth-child(14) {
+.introH1 .introSpan:nth-child(14) {
     animation-delay: 7.5s;
 }
 
-.quiz {
+.introSpan {
     color: rgb(15, 15, 15);
     animation-delay: 11.1s;
 }
 
-img {
+.introImg {
     width: 500px;
     height: 600px;
     display: inline-block;
@@ -182,11 +156,11 @@ img {
     }
 }
 
-h2 {
+.introH2 {
     color: white;
 }
 
-button {
+.introButton {
     height: 100px;
     width: 200px;
     margin: 0;
@@ -201,11 +175,11 @@ button {
     color: black;
 }
 
-button span {
+.introButton span {
     display: inline-block;
     animation: animate 0.5s linear forwards;
 }
 
-button span:nth-child(1) {
+.introButton span:nth-child(1) {
     animation-delay: 11.1s;
 }

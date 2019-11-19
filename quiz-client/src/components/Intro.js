@@ -9,27 +9,27 @@ export default class Intro extends Component {
         return (
             <div className="introDiv">
 
-            <section>
-        <img src={Arnold} className="img" />
-        <h1>
-            <span>S</span>
-            <span>C</span>
-            <span>H</span>
-            <span>W</span>
-            <span>A</span>
-            <span>R</span>
-            <span>Z</span>
-            <span>E</span>
-            <span>N</span>
-            <span>E</span>
-            <span>G</span>
-            <span>G</span>
-            <span>E</span>
-            <span>R</span>
+            <section className="introSection">
+        <img src={Arnold} className="introImg" />
+        <h1 className="introH1">
+            <span className="introSpan">S</span>
+            <span className="introSpan">C</span>
+            <span className="introSpan">H</span>
+            <span className="introSpan">W</span>
+            <span className="introSpan">A</span>
+            <span className="introSpan">R</span>
+            <span className="introSpan">Z</span>
+            <span className="introSpan">E</span>
+            <span className="introSpan">N</span>
+            <span className="introSpan">E</span>
+            <span className="introSpan">G</span>
+            <span className="introSpan">G</span>
+            <span className="introSpan">E</span>
+            <span className="introSpan">R</span>
             <br />
-            <span class="quiz">QUIZ</span>
+            <span className="introSpan">QUIZ</span>
         </h1>
-        <Link to="/quiz"><button><span>PLAY</span></button></Link>
+        <Link to="/quiz"><button className="introButton"><span className="introSpan">PLAY</span></button></Link>
     </section>
             </div>
         )
