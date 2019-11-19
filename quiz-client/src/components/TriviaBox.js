@@ -7,8 +7,8 @@ const TriviaBox = () => {
     const [questions, setQuestions] = useState([]);
 
     const data = [{
-        question: "Arska?",
-        choices: ["bluu", "blaa", "bloo", "oikea"],
+        question: "Arnold Schwarzenegger is one of the coolest guys in the world. Why is that?",
+        choices: ["He is the coolest", "The coolest he is", "Stupid question", "Question dumb it is"],
         right: "oikea"
     }]
 
@@ -22,7 +22,6 @@ const TriviaBox = () => {
 
   return (
     <div>
-     <h1>Arnold Schwarzenegger Quiz</h1>
       <div className="questionbox">
       <TriviaQuestion data={data}/>
       <p>{questions}</p>

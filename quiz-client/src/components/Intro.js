@@ -32,7 +32,9 @@ const Intro = () => {
                     <span className="introSpan">E</span>
                     <span className="introSpan">R</span>
                     <br />
-                    <span className="introSpan">QUIZ</span>
+                    <h1 className="introH1Quiz">
+                    <span className="introQuiz">QUIZ</span>
+                    </h1>
                 </h1>
                 <Link to="/quiz"><button className="introButton"><span className="introSpan">PLAY</span></button></Link>
             </section>

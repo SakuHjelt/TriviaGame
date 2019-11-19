@@ -1,0 +1,17 @@
+.nextButton {
+    font-size: 1em;
+    height: 50px;
+    width: 300px;
+    margin: 0;
+    padding: 0;
+    background: black;
+    border: none;
+    cursor: crosshair;
+    text-align: center;
+    letter-spacing: 0.2em;
+    color: green;
+    top: 80%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }

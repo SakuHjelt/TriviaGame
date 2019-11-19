@@ -1,9 +1,10 @@
 import React from 'react';
+import '../style/NextButton.css'
 
 const NextButton = () => {
   return(
     <div>
-      <button className="nextButton">Next Question</button>
+      <button className="nextButton">| Next Question |</button>
     </div>
   )
 }
