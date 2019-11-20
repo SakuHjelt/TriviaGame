@@ -51,7 +51,7 @@ const TriviaQuestion = ({ history, level, answers, question, rightAnswer, questi
       <br />
       C:\SkyNet\Level:
       <span className="questionNumber">
-        {level
+        {level}
       </span>
       <Link to="/gameover">
         <button className="PixelArnold"></button></Link>
