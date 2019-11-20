@@ -1,5 +1,6 @@
 import React from 'react';
 import '../style/TriviaQuestion.css'
+import '../style/PixelArnold.css'
 
 const TriviaQuestion = ({ data }) => {
   const questionNumber = 1;
@@ -13,7 +14,11 @@ const TriviaQuestion = ({ data }) => {
       <span className="questionNumber">
         {questionNumber}. 
       </span>
+      <p className="singleQuestion">
       <span className="questionTitle"> {data[0].question}</span>
+
+      <div className="PixelArnold"></div>
+      </p>
       <br/>
       <div className="allChecks">
       
@@ -21,7 +26,7 @@ const TriviaQuestion = ({ data }) => {
         
       <span className="answerLeft">
         <label for="CheckA" className="checkboxLetter">A</label>
-        <input name="checkA" type="checkbox" className="triviaCheckbox" /><span className="answerText">{data[0].wrong1}</span>
+        <input name="checkA" placeholder="A" type="checkbox" className="triviaCheckbox" /><span className="answerText">{data[0].wrong1}</span>
       </span>
 
       <span className="answer">
