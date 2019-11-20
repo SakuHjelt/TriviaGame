@@ -25,7 +25,6 @@ const Quiz = () => {
   return (
     <div className="quizPage">
       <h1 className="quizTitle"> Arnold Schwarzenegger </h1>
-      <h1>Quiz</h1>
       <TriviaBox data={questions} />
       <NextButton />
     </div>
