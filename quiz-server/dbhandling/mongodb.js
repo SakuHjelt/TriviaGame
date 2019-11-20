@@ -29,7 +29,7 @@ itemList = []
 MongoClient.connect(url, function(err, db) {
     if (err) throw err;
     var dbo = db.db("arnold");
-    dbo.collection("levelOne").aggregate([{$sample:{size: 2}}]).toArray(function(err, result) {
+    dbo.collection("levelOne").aggregate([{$sample:{size: 3}}]).toArray(function(err, result) {
         if (err) throw err;
         result.map(item => {
             itemList.push(item);
@@ -41,7 +41,7 @@ MongoClient.connect(url, function(err, db) {
             itemList.push(item);
         })
     });
-    dbo.collection("levelThree").aggregate([{$sample:{size: 2}}]).toArray(function(err, result) {
+    dbo.collection("levelThree").aggregate([{$sample:{size: 3}}]).toArray(function(err, result) {
         if (err) throw err;
         result.map(item => {
             itemList.push(item);
