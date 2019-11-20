@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import NextButton from './NextButton';
-import '../style/TriviaQuestion.css'
-import '../style/PixelArnold.css'
+import '../style/TriviaQuestion.css';
+import '../style/PixelArnold.css';
+import { Link } from 'react-router-dom';
 
 const TriviaQuestion = ({ answers, question, rightAnswer, questionNumber, setQuestionNumber }) => {
   const [selected, setSelected] = useState();
@@ -57,13 +58,12 @@ const TriviaQuestion = ({ answers, question, rightAnswer, questionNumber, setQue
       <span className="questionNumber">
         {pointCounter}
       </span>
-      <p className="singleQuestion">
-        <span className="questionTitle">{question}</span>
-
-        <div className="PixelArnold"></div>
-      </p>
+      <Link to="/gameover">
+        <button className="PixelArnold"></button></Link>
+      
       <br />
       <div className="allChecks">
+
 
         <br />
         <form>
@@ -89,7 +89,15 @@ const TriviaQuestion = ({ answers, question, rightAnswer, questionNumber, setQue
           </div>
         </form>
       </div>
+      <div className="singleQuestion">
+        <span className="questionTitle">{question}</span>
+      </div>
+
+
       <NextButton btnClick={checkCorrect} />
+
+
+
     </div>
   )
 }

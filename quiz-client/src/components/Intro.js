@@ -13,7 +13,6 @@ const Intro = () => {
 
     return (
         <div className="introDiv">
-            <div></div>
             <section className="introSection">
                 <img src={Arnold} className="introImg" />
                 <h1 className="introH1">

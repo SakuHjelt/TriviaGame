@@ -7,8 +7,10 @@ import { fetchData } from '../serviceClient';
 const Quiz = () => {
   const [hastalavista] = useState(new Audio(buttonSound));
   const [questions, setQuestions] = useState([{
+    
     question: "A little question for you:",
-    choices: ["o","a","a","r"]
+    options: ["a","b","c","d"]
+
   }]);
   const [questionNumber, setQuestionNumber] = useState(0);
 
@@ -38,7 +40,7 @@ const Quiz = () => {
     hastalavista.play();
     getData();
   }, [])
-  console.log(questions)
+
 
   return (
     <div className="quizPage">

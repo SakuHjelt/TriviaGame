@@ -62,8 +62,13 @@
 }
 
 .singleQuestion {
-    color: red;
-    background: green;
+    color: red; 
+    width: 50px;
+    
+    top: 110%;
+    left: 59%;
+    position: absolute;
+    transform: translate(-50%, -50%); 
     
 }
 
