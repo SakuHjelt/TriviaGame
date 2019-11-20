@@ -3,10 +3,10 @@ import NextButton from './NextButton';
 import '../style/TriviaQuestion.css'
 import '../style/PixelArnold.css'
 
-const TriviaQuestion = ({ data }) => {
+const TriviaQuestion = ({ answers, question, rightAnswer, questionNumber, setQuestionNumber }) => {
   const [selected, setSelected] = useState();
   const [pointCounter, setPointCounter] = useState(0);
-  const [questionNumber, setQuestionNumber] = useState(0);
+ /*  const [questionNumber, setQuestionNumber] = useState(0);
 
   const question = data[questionNumber].question;
   const answers = [data[questionNumber].q1, data[questionNumber].q2, data[questionNumber].q3, data[questionNumber].q4];
@@ -23,7 +23,7 @@ const TriviaQuestion = ({ data }) => {
     }
     return arr;
   }
-  const shuffled = shuffle(answers);
+  const shuffled = shuffle(answers); */
 
   const onChange = (event) => {
     setSelected({ ...selected, [event.target.name]: event.target.value });
@@ -34,8 +34,8 @@ const TriviaQuestion = ({ data }) => {
     if (selected === undefined) {
       alert("You must choose!");
     } else {
-      setQuestionNumber(b => b + 1);
-      if (selected.checkbox === "neljä") {
+      setQuestionNumber();
+      if (selected.checkbox === rightAnswer) {
         setPointCounter(a => a + 1);
         console.log(pointCounter)
       }
@@ -69,23 +69,23 @@ const TriviaQuestion = ({ data }) => {
         <form>
           <span>
             <label for="CheckA" className="checkboxLetter">A</label>
-            <input onChange={onChange} value="yksi" name="checkbox" placeholder="A" type="radio" className="triviaCheckbox" /><span className="answerText">{shuffled[0]}</span>
+            <input onChange={onChange} value={answers[0]} name="checkbox" placeholder="A" type="radio" className="triviaCheckbox" /><span className="answerText">{answers[0]}</span>
           </span>
           <br />
           <span>
             <label for="CheckB" className="checkboxLetter">B</label>
-            <input onChange={onChange} value="kaksi" name="checkbox" type="radio" className="triviaCheckbox" /><span className="answerText">{shuffled[1]}</span>
+            <input onChange={onChange} value={answers[1]} name="checkbox" type="radio" className="triviaCheckbox" /><span className="answerText">{answers[1]}</span>
           </span>
 
           <br />
           <span>
             <label for="CheckC" className="checkboxLetter">C</label>
-            <input onChange={onChange} value="kolme" name="checkbox" type="radio" className="triviaCheckbox" /><span className="answerText">{shuffled[2]}</span>
+            <input onChange={onChange} value={answers[2]} name="checkbox" type="radio" className="triviaCheckbox" /><span className="answerText">{answers[2]}</span>
           </span>
           <br />
           <div>
             <label for="CheckD" className="checkboxLetter">D</label>
-            <input onChange={onChange} value="neljä" name="checkbox" type="radio" className="triviaCheckbox" /><span className="answerText">{shuffled[3]}</span>
+            <input onChange={onChange} value={answers[3]} name="checkbox" type="radio" className="triviaCheckbox" /><span className="answerText">{answers[3]}</span>
           </div>
         </form>
       </div>
