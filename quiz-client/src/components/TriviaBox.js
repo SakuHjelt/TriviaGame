@@ -2,12 +2,12 @@ import React from 'react';
 import '../style/TriviaBox.css';
 import TriviaQuestion from './TriviaQuestion';
 
-const TriviaBox = ({data}) => {
-
+const TriviaBox = ({question, answers, rightAnswer, questionNumber, setQuestionNumber}) => {
   return (
     <div>
       <div className="questionbox">
-      <TriviaQuestion data={data}/>
+      <TriviaQuestion setQuestionNumber={setQuestionNumber} questionNumber={questionNumber} answers={answers} question={question} rightAnswer={rightAnswer} />
+      <p></p>
       </div>
     </div>
   )
