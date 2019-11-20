@@ -4,12 +4,12 @@ import '../style/Quiz.css';
 import buttonSound from '../sounds/hastalavista.mp3';
 import { fetchData } from '../serviceClient';
 
-const Quiz = () => {
+const Quiz = ({ history }) => {
   const [hastalavista] = useState(new Audio(buttonSound));
   const [questions, setQuestions] = useState([{
-    
+
     question: "A little question for you:",
-    options: ["a","b","c","d"]
+    options: ["a", "b", "c", "d"]
 
   }]);
   const [questionNumber, setQuestionNumber] = useState(0);
@@ -41,11 +41,15 @@ const Quiz = () => {
     getData();
   }, [])
 
-
   return (
     <div className="quizPage">
-      <h1 className="quizTitle"> Arnold Schwarzenegger </h1>
-      <TriviaBox setQuestionNumber={() => setQuestionNumber(a => a + 1)} questionNumber={questionNumber} answers={shuffled} question={question} rightAnswer={rightAnswer}/>
+
+      <h1 className="quizTitle">
+JOKU HIENO OTSIKKO
+      </h1>
+
+      <TriviaBox history={history} setQuestionNumber={() => setQuestionNumber(a => a + 1)} questionNumber={questionNumber} answers={shuffled} question={question} rightAnswer={rightAnswer} level={questions[questionNumber].level} />
+
     </div>
   )
 };
