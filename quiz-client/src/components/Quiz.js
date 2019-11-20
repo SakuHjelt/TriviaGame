@@ -8,25 +8,31 @@ import { fetchData } from '../serviceClient';
 const Quiz = () => {
   const [hastalavista] = useState(new Audio(buttonSound));
   const [questions, setQuestions] = useState([{
-    question: "A little question for you:",
-    choices: ["o","a","a","r"]
   }]);
+  const [questionNumber, setquestionNumber] = useState(0);
 
   const getData = () => {
     fetchData().then(res => setQuestions(res));
   };
 
+  const nextQuestion = () => {
+
+  }
+
   useEffect(() => {
     hastalavista.play();
     getData();
   }, [])
-  console.log(questions)
+  console.log("Näkyykö" + questions[0].correct)
+
+  let item = questions.map((quest))
 
   return (
     <div className="quizPage">
       <h1 className="quizTitle"> Arnold Schwarzenegger </h1>
 
       <TriviaBox data={questions} />
+      <button onClick={nextQuestion}>Testinappi</button>
       <NextButton />
     </div>
   )
