@@ -8,6 +8,10 @@ import { fetchData } from '../serviceClient';
 const Quiz = () => {
   const [hastalavista] = useState(new Audio(buttonSound));
   const [questions, setQuestions] = useState([{
+    
+    question: "A little question for you:",
+    options: ["a","b","c","d"]
+
   }]);
   const [questionNumber, setquestionNumber] = useState(0);
 
