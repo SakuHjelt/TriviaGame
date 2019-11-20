@@ -41,7 +41,6 @@ const Quiz = () => {
     getData();
   }, [])
 
-
   return (
     <div className="quizPage">
       <h1 className="quizTitle"> Arnold Schwarzenegger </h1>

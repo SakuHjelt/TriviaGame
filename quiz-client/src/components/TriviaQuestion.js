@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import NextButton from './NextButton';
 import '../style/TriviaQuestion.css';
 import '../style/PixelArnold.css';
@@ -24,6 +24,7 @@ const TriviaQuestion = ({ answers, question, rightAnswer, questionNumber, setQue
     }
     return arr;
   }
+
   const shuffled = shuffle(answers); */
 
   const onChange = (event) => {
@@ -42,6 +43,7 @@ const TriviaQuestion = ({ answers, question, rightAnswer, questionNumber, setQue
       }
       console.log(pointCounter)
     }
+   
   }
 
   return (
@@ -93,10 +95,7 @@ const TriviaQuestion = ({ answers, question, rightAnswer, questionNumber, setQue
         <span className="questionTitle">{question}</span>
       </div>
 
-
       <NextButton btnClick={checkCorrect} />
-
-
 
     </div>
   )
