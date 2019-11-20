@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import NextButton from './NextButton';
-import '../style/TriviaQuestion.css'
-import '../style/PixelArnold.css'
+import '../style/TriviaQuestion.css';
+import '../style/PixelArnold.css';
+import { Link } from 'react-router-dom';
 
 const TriviaQuestion = ({ data }) => {
   const [selected, setSelected] = useState();
@@ -57,11 +58,9 @@ const TriviaQuestion = ({ data }) => {
       <span className="questionNumber">
         {pointCounter}
       </span>
-      <p className="singleQuestion">
-        <span className="questionTitle">{question}</span>
-
-        <div className="PixelArnold"></div>
-      </p>
+      <Link to="/gameover">
+        <button className="PixelArnold"></button></Link>
+      
       <br />
       <div className="allChecks">
 
@@ -90,32 +89,14 @@ const TriviaQuestion = ({ data }) => {
           </div>
         </form>
       </div>
+      <div className="singleQuestion">
+        <span className="questionTitle">{question}</span>
+      </div>
+
+
       <NextButton btnClick={checkCorrect} />
 
-      
-      <br/>
-        
-      <span className="answerLeft">
-        <label for="CheckA" className="checkboxLetter">A</label>
-        <input name="checkA" placeholder="A" type="checkbox" className="triviaCheckbox" /><span className="answerText">{data[0].q1}</span>
-      </span>
 
-      <span className="answer">
-        <label for="CheckB" className="checkboxLetter">B</label>
-        <input name="checkB" type="checkbox" className="triviaCheckbox" /><span className="answerText">{data[0].q2}</span>
-      </span>
-
-      <br />
-      <span className="answerLeft">
-        <label for="CheckC" className="checkboxLetter">C</label>
-        <input name="checkC" type="checkbox" className="triviaCheckbox" /><span className="answerText">{data[0].q3}</span>
-      </span>
-
-      <span className="answer">
-        <label for="CheckD" className="checkboxLetter">D</label>
-        <input name="checkD" type="checkbox" className="triviaCheckbox" /><span className="answerText">{data[0].q4}</span>
-      </span>
-    </div>
 
     </div>
   )
