@@ -7,7 +7,6 @@ const TriviaBox = ({data}) => {
     <div>
       <div className="questionbox">
       <TriviaQuestion data={data}/>
-      <p></p>
       </div>
     </div>
   )
