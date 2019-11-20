@@ -33,7 +33,7 @@ const TriviaQuestion = ({ history, level, answers, question, rightAnswer, questi
   return (
     <div className="triviaQuestionDiv">
       SkyNet [Version &#8734;&#8734;.&#8734;.&#8734;&#8734;&#8734;&#8734;&#8734;.&#8734;&#8734;&#8734;] <br />
-      (c) 4019 SkyNet Corporation. All rights reserved. <br />
+      (c) 4019 Cyberyne Systems Corporation. All rights reserved. <br />
       C:\SkyNet <br />
       C:\SkyNet\QuestionNumber:
       <span className="questionNumber">
@@ -44,14 +44,18 @@ const TriviaQuestion = ({ history, level, answers, question, rightAnswer, questi
       <span className="questionNumber">
         {pointCounter}
       </span>
+
+      <div className="PixelArnold"></div>
+
       <br />
       <br />
       C:\SkyNet\Level:
       <span className="questionNumber">
-        {level}
+        {level
       </span>
       <Link to="/gameover">
         <button className="PixelArnold"></button></Link>
+
 
       <br />
       <div className="allChecks">

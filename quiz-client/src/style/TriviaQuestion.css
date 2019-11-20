@@ -1,15 +1,11 @@
 
 
 .triviaQuestionDiv {
+    width: auto;
     padding: 10px;
     font-size: 1.5em;
     color: green;
     text-align: left;
-}
-
-.answerLeft {
-    padding: 20px;
-    margin-right: 50px;
 }
 
 .questionTitle {
@@ -26,7 +22,7 @@
 }
 
 .checkboxLetter {
-    font-size: 4em;
+    font-size: 3em;
 }
 
 .triviaCheckbox {
@@ -55,7 +51,7 @@
     width: 100%;
     height: 500px;
     top: 80%;
-    left: 59%;
+    left: 52%;
     position: absolute;
     transform: translate(-50%, -50%);
     
@@ -63,12 +59,16 @@
 
 .singleQuestion {
     color: red; 
+    font-size: 1.7em;
     width: 50px;
     
-    top: 110%;
+    top: 120%;
     left: 59%;
     position: absolute;
     transform: translate(-50%, -50%); 
     
 }
 
+.answerText {
+    font-size: 2em;
+}
