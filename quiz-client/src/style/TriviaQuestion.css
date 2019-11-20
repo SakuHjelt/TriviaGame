@@ -2,7 +2,7 @@
 
 .triviaQuestionDiv {
     padding: 10px;
-    font-size: 1.8em;
+    font-size: 1.5em;
     color: green;
     text-align: left;
 }
@@ -14,13 +14,14 @@
 
 .questionTitle {
     float: right;
-    font-size: 2em;
-    width: 100%;
+    font-size: 1em;
+    width: 380px;
     height: 500px;
-    top: 110%;
+    top: 120%;
     left: 59%;
     position: absolute;
     transform: translate(-50%, -50%);
+    word-wrap: break-word;
 
 }
 
@@ -29,8 +30,8 @@
 }
 
 .triviaCheckbox {
-    height: 2em;
-    width: 2em;
+    height: 1.5em;
+    width: 1.5em;
     ;
 }
 
@@ -48,6 +49,8 @@
   }
 
 .allChecks {
+    height: 2em;
+    width: 2em;
     font-size: 0.7em;
     width: 100%;
     height: 500px;
@@ -57,3 +60,10 @@
     transform: translate(-50%, -50%);
     
 }
+
+.singleQuestion {
+    color: red;
+    background: green;
+    
+}
+
