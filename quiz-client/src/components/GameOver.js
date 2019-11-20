@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import '../style/GameOver.css'
 import GameOverImg from '../pics/gameover.jpg'
 import GameOverMusic from '../sounds/GameOverMusic.mp3';
+import HallOfFame from '../components/HallOfFame'
 
 const GameOver = () => {
     const [gameOverAudio] = useState(new Audio(GameOverMusic));
@@ -25,6 +26,7 @@ const GameOver = () => {
         </h1>
 
     </section>
+    <HallOfFame />
     </div>
     </body>
     )

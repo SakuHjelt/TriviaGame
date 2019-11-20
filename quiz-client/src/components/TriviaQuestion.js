@@ -58,8 +58,7 @@ const TriviaQuestion = ({ answers, question, rightAnswer, questionNumber, setQue
       <span className="questionNumber">
         {pointCounter}
       </span>
-      <Link to="/gameover">
-        <button className="PixelArnold"></button></Link>
+      <div className="PixelArnold"></div>
       
       <br />
       <div className="allChecks">

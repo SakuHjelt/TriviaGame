@@ -5,6 +5,7 @@ import './style/App.css';
 import GameOver from './components/GameOver'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
+
 function App() {
   return (
     <div className="App">
@@ -13,6 +14,7 @@ function App() {
           <Route exact path="/" component={Intro} />
           <Route exact path="/quiz" component={Quiz} />
           <Route exact path="/gameover" component={GameOver} />
+
 
         </Switch>
       </Router>
