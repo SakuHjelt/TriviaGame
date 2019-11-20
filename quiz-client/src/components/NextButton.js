@@ -1,10 +1,10 @@
 import React from 'react';
 import '../style/NextButton.css'
 
-const NextButton = () => {
+const NextButton = ({btnClick}) => {
   return(
     <div>
-      <button className="nextButton">| Next Question |</button>
+      <button onClick={btnClick} className="nextButton">| Next Question |</button>
     </div>
   )
 }

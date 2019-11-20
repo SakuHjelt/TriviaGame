@@ -19,19 +19,19 @@ MongoClient.connect(url, function(err, db) {
     var myobj4 = [
         {question:'From which of these movies is Arnold’s quote “Cocainum!” from?', correct:'Red Heat', q1:'Red Sonja', q2:'Red Heat', q3:'Eraser', q4: 'True Lies', level: 4},{question:'Arnold is not only an actor, bodybuilder and a politician but a businessman as well. He started his first business as early as 1968 with his fellow bodybuilder Franco Columbu. What kind of business were they running?', correct:'Bricklaying venture', q1:'Mail-order business selling instructional tapes for bodybuilding', q2:'Operating an independent gym in Graz, Austria', q3:'Bricklaying venture', q4: 'Real estate investment agency', level: 4},{question:'In the classic movie Predator, Arnold plays an army veteran Alan “Ducth” Schaefer, who is hired to lead a special mission into the jungle. Which military rank does Dutch hold?', correct:'Major', q1:'Major', q2:'Second Lieutenant', q3:'Lieutenant Colonel', q4: 'Sergeant First Class', level: 4}
     ]
-    dbo.collection("q4: '', levelOne").insertMany(myobj1, function(err, res) {
+    dbo.collection("levelOne").insertMany(myobj1, function(err, res) {
       if (err) throw err;
       console.log("Number of documents inserted: " + res.insertedCount);
     });
-    dbo.collection("q4: '', levelTwo").insertMany(myobj2, function(err, res) {
+    dbo.collection("levelTwo").insertMany(myobj2, function(err, res) {
         if (err) throw err;
         console.log("Number of documents inserted: " + res.insertedCount);
       });
-    dbo.collection("q4: '', levelThree").insertMany(myobj3, function(err, res) {
+    dbo.collection("levelThree").insertMany(myobj3, function(err, res) {
         if (err) throw err;
         console.log("Number of documents inserted: " + res.insertedCount);
       });
-    dbo.collection("q4: '', levelFour").insertMany(myobj4, function(err, res) {
+    dbo.collection("levelFour").insertMany(myobj4, function(err, res) {
         if (err) throw err;
         console.log("Number of documents inserted: " + res.insertedCount);
       });
