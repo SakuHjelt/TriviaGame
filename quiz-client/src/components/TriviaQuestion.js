@@ -26,23 +26,23 @@ const TriviaQuestion = ({ data }) => {
         
       <span className="answerLeft">
         <label for="CheckA" className="checkboxLetter">A</label>
-        <input name="checkA" placeholder="A" type="checkbox" className="triviaCheckbox" /><span className="answerText">{data[0].wrong1}</span>
+        <input name="checkA" placeholder="A" type="checkbox" className="triviaCheckbox" /><span className="answerText">{data[0].q1}</span>
       </span>
 
       <span className="answer">
         <label for="CheckB" className="checkboxLetter">B</label>
-        <input name="checkB" type="checkbox" className="triviaCheckbox" /><span className="answerText">{data[0].wrong2}</span>
+        <input name="checkB" type="checkbox" className="triviaCheckbox" /><span className="answerText">{data[0].q2}</span>
       </span>
 
       <br />
       <span className="answerLeft">
         <label for="CheckC" className="checkboxLetter">C</label>
-        <input name="checkC" type="checkbox" className="triviaCheckbox" /><span className="answerText">{data[0].wrong3}</span>
+        <input name="checkC" type="checkbox" className="triviaCheckbox" /><span className="answerText">{data[0].q3}</span>
       </span>
 
       <span className="answer">
         <label for="CheckD" className="checkboxLetter">D</label>
-        <input name="checkD" type="checkbox" className="triviaCheckbox" /><span className="answerText">{data[0].correct}</span>
+        <input name="checkD" type="checkbox" className="triviaCheckbox" /><span className="answerText">{data[0].q4}</span>
       </span>
     </div>
     </div>
