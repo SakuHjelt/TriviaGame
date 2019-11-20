@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import NextButton from './NextButton';
 import '../style/TriviaQuestion.css';
 import '../style/PixelArnold.css';
@@ -27,6 +27,7 @@ const TriviaQuestion = ({ history, level, answers, question, rightAnswer, questi
       console.log('blöö')
       history.push("/gameover");
     }
+   
   }
 
   return (

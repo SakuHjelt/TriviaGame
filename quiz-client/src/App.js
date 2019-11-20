@@ -13,7 +13,6 @@ function App() {
           <Route exact path="/" component={Intro} />
           <Route exact path="/quiz" render={props => <Quiz {...props} />} />
           <Route exact path="/gameover" component={GameOver} />
-
         </Switch>
       </Router>
     </div>
