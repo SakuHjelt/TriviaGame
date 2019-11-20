@@ -4,28 +4,9 @@ import '../style/TriviaQuestion.css';
 import '../style/PixelArnold.css';
 import { Link } from 'react-router-dom';
 
-const TriviaQuestion = ({ answers, question, rightAnswer, questionNumber, setQuestionNumber }) => {
+const TriviaQuestion = ({ history, level, answers, question, rightAnswer, questionNumber, setQuestionNumber }) => {
   const [selected, setSelected] = useState();
   const [pointCounter, setPointCounter] = useState(0);
- /*  const [questionNumber, setQuestionNumber] = useState(0);
-
-  const question = data[questionNumber].question;
-  const answers = [data[questionNumber].q1, data[questionNumber].q2, data[questionNumber].q3, data[questionNumber].q4];
-
-  const shuffle = (arr) => {
-    let i,
-      j,
-      temp;
-    for (i = answers.length - 1; i > 0; i--) {
-      j = Math.floor(Math.random() * (i + 1));
-      temp = arr[i];
-      arr[i] = arr[j];
-      arr[j] = temp;
-    }
-    return arr;
-  }
-
-  const shuffled = shuffle(answers); */
 
   const onChange = (event) => {
     setSelected({ ...selected, [event.target.name]: event.target.value });
@@ -35,13 +16,16 @@ const TriviaQuestion = ({ answers, question, rightAnswer, questionNumber, setQue
     console.log("selected: ", selected)
     if (selected === undefined) {
       alert("You must choose!");
-    } else {
+    } else if (questionNumber < 9) {
       setQuestionNumber();
       if (selected.checkbox === rightAnswer) {
         setPointCounter(a => a + 1);
         console.log(pointCounter)
       }
       console.log(pointCounter)
+    } else {
+      console.log('blöö')
+      history.push("/gameover");
     }
    
   }
@@ -60,9 +44,15 @@ const TriviaQuestion = ({ answers, question, rightAnswer, questionNumber, setQue
       <span className="questionNumber">
         {pointCounter}
       </span>
+      <br />
+      <br />
+      C:\SkyNet\Level:
+      <span className="questionNumber">
+        {level}
+      </span>
       <Link to="/gameover">
         <button className="PixelArnold"></button></Link>
-      
+
       <br />
       <div className="allChecks">
 
@@ -94,9 +84,7 @@ const TriviaQuestion = ({ answers, question, rightAnswer, questionNumber, setQue
       <div className="singleQuestion">
         <span className="questionTitle">{question}</span>
       </div>
-
       <NextButton btnClick={checkCorrect} />
-
     </div>
   )
 }
