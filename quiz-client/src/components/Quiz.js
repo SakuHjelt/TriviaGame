@@ -12,31 +12,21 @@ const Quiz = () => {
     options: ["a","b","c","d"]
 
   }]);
-  const [questionNumber, setquestionNumber] = useState(0);
 
   const getData = () => {
     fetchData().then(res => setQuestions(res));
   };
 
-  const nextQuestion = () => {
-
-  }
 
   useEffect(() => {
     hastalavista.play();
     getData();
   }, [])
-  console.log("Näkyykö" + questions[0].correct)
-
-  let item = questions.map((quest))
 
   return (
     <div className="quizPage">
       <h1 className="quizTitle"> Arnold Schwarzenegger </h1>
-      <TriviaBox data={questions} />
-
-      <button onClick={nextQuestion}>Testinappi</button>
-      <NextButton />
+      <TriviaBox data={questions}/>
 
     </div>
   )
