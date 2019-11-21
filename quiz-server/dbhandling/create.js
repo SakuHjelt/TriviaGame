@@ -11,9 +11,9 @@ function createInputs() {
       { question: 'In which year was I elected as California’s governor?', correct: '2003', q1: '2010', q2: '1990', q3: '2003', q4: '2015', level: 1 },
       { question: 'How is my surname written?', correct: 'Schwarzenegger', q1: 'Svarzenegger', q2: 'Schwarzenegger', q3: 'Shwvartzenegger', q4: 'Swartzenegger', level: 1 },
       { question: 'Who am I?', correct: 'All mentioned', q1: 'Ex-governor of California', q2: 'Actor', q3: 'All mentioned', q4: 'Former professional bodybuilder', level: 1 },
-      { question: 'What was my nickname during my political career', correct: 'The Governator', q1: 'The Governator', q2: 'The Terminator', q3: 'The Alligator', q4: 'The Governor', level: 1 },
-      { question: 'What was my nickname during my acting career', correct: 'Arnie', q1: 'Bernie', q2: 'Arnie', q3: 'Governor', q4: 'The Austrian Oak', level: 1 },
-      { question: 'How many times did I win Mr. Universe', correct: 'Four times', q1: 'Four times', q2: 'One time', q3: 'Two times', q4: 'Three times', level: 1 },
+      { question: 'What was my nickname during my political career?', correct: 'The Governator', q1: 'The Governator', q2: 'The Terminator', q3: 'The Alligator', q4: 'The Governor', level: 1 },
+      { question: 'What was my nickname during my acting career?', correct: 'Arnie', q1: 'Bernie', q2: 'Arnie', q3: 'Governor', q4: 'The Austrian Oak', level: 1 },
+      { question: 'How many times did I win Mr. Universe competition?', correct: 'Four times', q1: 'Four times', q2: 'One time', q3: 'Two times', q4: 'Three times', level: 1 },
       { question: 'I had the lead role in one of these movies. Which one it is?', correct: 'The Terminator', q1: 'Arnold Schwarzenegger and the Philosopher`s stone', q2: 'The Terminator', q3: 'The Terminator and the Chamber of Secrets', q4: 'Arnie and the Prisoner of Azkaban', level: 1 },
       { question: 'In what country was I born?', correct: 'Austria', q1: 'Bangladesh', q2: 'Austria', q3: 'China', q4: 'Finland', level: 1 },
     ];
@@ -44,7 +44,7 @@ function createInputs() {
     var myobj4 = [
       { question: 'Fill in the missing words. "I need your ____, your ____ and your ____?', correct: 'clothes, boots, motorcycle', q1: 'boots, clothes, motorcycle', q2: 'clothes, motorcycle, boots', q3: 'boots, motorcycle, clothes', q4: 'clothes, boots, motorcycle', level: 4 },
       { question: 'From which of these movies is my quote “Cocainum!” from?', correct: 'Red Heat', q1: 'Red Sonja', q2: 'Red Heat', q3: 'Eraser', q4: 'True Lies', level: 4 },
-      { question: 'In the sci-fi blockbuster, "Total Recall", I hold arms of Richtor while an elevator cuts them off, causing Richtor to plunge to his death. As he is falling what do I say?', correct: 'See you at the party, Richtor.', q1: '"I`ll be back, Richtor"', q2: '"Hasta la vista, Richtor"', q3: '"Bite me, Richtor"', q4: 'See you at the party, Richtor.', level: 4 },
+      { question: 'In the sci-fi blockbuster, "Total Recall", I hold arms of Richtor while an elevator cuts them off, causing Richtor to plunge to his death. As he is falling what do I say?', correct: '"See you at the party, Richtor."', q1: '"I`ll be back, Richtor"', q2: '"Hasta la vista, Richtor"', q3: '"Bite me, Richtor"', q4: '"See you at the party, Richtor."', level: 4 },
       { question: 'I am not only an actor, bodybuilder and a politician but a businessman as well. I started my first business as early as 1968 with my fellow bodybuilder Franco Columbu. What kind of business were we running?', correct: 'Bricklaying venture', q1: 'Mail-order business selling instructional tapes for bodybuilding', q2: 'Operating an independent gym in Graz, Austria', q3: 'Bricklaying venture', q4: 'Real estate investment agency', level: 4 },
       { question: 'In the classic movie Predator, I play an army veteran Alan “Ducth” Schaefer, who is hired to lead a special mission into the jungle. Which military rank does Dutch hold?', correct: 'Major', q1: 'Major', q2: 'Second Lieutenant', q3: 'Lieutenant Colonel', q4: 'Sergeant First Class', level: 4 },
       { question: 'In the action film "The Running Man", I use my most famous one liner "I`ll be back" to TV`s Richard Daweson. How does the game show legend respond to the greatest line in movie history?', correct: 'Only in a rerun', q1: 'Okay', q2: 'See you in the party', q3: 'Bite me', q4: 'Only in a rerun', level: 4 },
@@ -53,6 +53,7 @@ function createInputs() {
       { question: 'In this movie the villain is hanging on a missile. I pressed the button and said "you`re fired"', correct: 'True Lies', q1: 'Junior', q2: 'Batman & Robin', q3: 'End of Days', q4: 'True Lies', level: 4 },
       { question: 'What was my father`s profession?', correct: 'He was the local chief of police', q1: 'He was a senior physician at local hospital', q2: 'He was a nurse', q3: 'He was the local chief of police', q4: 'He was a major in army', level: 4 }
     ]
+    var scoreObj = [{name: "Mönsiäinen", score: 100}, {name: "Saku", score: 31}, {name: "Kagenuge", score: 24}, {name: "Maria", score: 27}, {name: "Anna", score: 36}]
     dbo.collection("levelOne").insertMany(myobj1, function (err, res) {
       if (err) throw err;
       console.log("Number of documents inserted: " + res.insertedCount);
@@ -69,9 +70,9 @@ function createInputs() {
       if (err) throw err;
       console.log("Number of documents inserted: " + res.insertedCount);
     });
-    dbo.createCollection("hallOfFame", function (err, res) {
+    dbo.collection("hallOfFame").insertMany(scoreObj, function (err, res) {
       if (err) throw err;
-      console.log("Also added hallOfFame");
+      console.log("Number of documents inserted: " + res.insertedCount);
       db.close();
     });
   });

@@ -5,16 +5,10 @@ var questions = require('../dbhandling/mongodb')
 /* GET users listing. */
 router
 .get('', function(req, res, next) {
-  questions.getQuestions(result => {
+  questions.getScores(result => {
     res.json(result)
+    .status(200).end()
   })
 })
-
-.post('', function(req, res) {
-  questions.createNick(req, result => {
-    res.status(201).end()
-  })
-})
-
 
 module.exports = router;

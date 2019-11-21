@@ -50,11 +50,6 @@ const Quiz = ({ history }) => {
   if (questionNumber < 10) {
   return (
     <div className="quizPage">
-
-      <h1 className="quizTitle">
-        JOKU HIENO OTSIKKO
-      </h1>
-
       <TriviaBox getPoints={getPoints} history={history} setQuestionNumber={() => setQuestionNumber(a => a + 1)} questionNumber={questionNumber} answers={shuffled} question={question} rightAnswer={rightAnswer} level={questions[questionNumber].level} />
 
     </div>
