@@ -38,7 +38,6 @@ const TriviaQuestion = ({ getPoints, history, level, answers, question, rightAns
   }
   getPoints(pointCounter);
 
-
 return (
   <div className="triviaQuestionDiv">
   SkyNet [Version &#8734;&#8734;.&#8734;.&#8734;&#8734;&#8734;&#8734;&#8734;.&#8734;&#8734;&#8734;] <br />
