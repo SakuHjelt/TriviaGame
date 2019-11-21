@@ -126,9 +126,21 @@ const TriviaQuestion = ({ getPoints, history, level, answers, question, rightAns
       </span>
       {/*       <Link to="/gameover">
       <button className="PixelArnold"></button></Link> */}
+
     <br />
     
     <div className="allChecks">
+
+
+
+      <br />
+      <br />
+      C:\SkyNet\Score:
+    <span className="questionNumber">
+        {pointCounter}
+      </span>
+      <div className="allChecks">
+
 
 
         <br />
@@ -164,7 +176,11 @@ const TriviaQuestion = ({ getPoints, history, level, answers, question, rightAns
         <span className="questionTitle">{question}</span>
       </div>
       <NextButton btnClick={checkCorrect} />
-        </div>
+
+    </div>
+
+
+  </div>
 )
 
 }
