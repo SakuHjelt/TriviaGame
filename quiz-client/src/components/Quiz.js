@@ -20,6 +20,7 @@ const Quiz = ({ history }) => {
   const rightAnswer = questions[questionNumber].correct;
   const answers = [questions[questionNumber].q1, questions[questionNumber].q2, questions[questionNumber].q3, questions[questionNumber].q4];
 
+  console.log(questions)
   const shuffle = (arr) => {
     let i,
       j,
@@ -48,7 +49,7 @@ const Quiz = ({ history }) => {
     setPoints(pointsis);
   }
   //Miten saada 10 kysymystä? Kaatuu, jos < 10 - ei tunnista yllä enää arraysta indeksejä, tietenkään
-  if (questionNumber < 9) {
+  if (questionNumber < 10) {
   return (
     <div className="quizPage">
 

@@ -32,7 +32,7 @@ const TriviaQuestion = ({ getPoints, history, level, answers, question, rightAns
       C:\SkyNet <br />
       C:\SkyNet\QuestionNumber:
       <span className="questionNumber">
-        {questionNumber+1}.
+        {questionNumber}.
       </span>
       <br />
       C:\SkyNet\Score:
