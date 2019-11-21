@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import TriviaBox from './TriviaBox';
 import '../style/Quiz.css';
-import buttonSound from '../sounds/hastalavista.mp3';
+import questionMusic from '../sounds/questionMusic.mp3';
 import { fetchData } from '../serviceClient';
 import HallOfFame from './HallOfFame'
 
 const Quiz = ({ history }) => {
-  const [hastalavista] = useState(new Audio(buttonSound));
+  const [music] = useState(new Audio(questionMusic));
   const [questions, setQuestions] = useState([{
 
     question: "A little question for you:",
@@ -39,7 +39,7 @@ const Quiz = ({ history }) => {
   };
 
   useEffect(() => {
-    hastalavista.play();
+    music.play();
     getData();
   }, [hastalavista])
 
@@ -47,18 +47,14 @@ const Quiz = ({ history }) => {
   const getPoints = (pointsis) => {
     setPoints(pointsis);
   }
+  
   //Miten saada 10 kysymystä? Kaatuu, jos < 10 - ei tunnista yllä enää arraysta indeksejä, tietenkään
   if (questionNumber < 9) {
   return (
     <div className="quizPage">
 
       <h1 className="quizTitle">
-´,´,´_________ ´,´,´´,.__ ´,´,´,´,´´,´,´´,´,´´,´,´´,´,´´,´,´´,´,´´,´,´´,´,´´,´,´´,´,´´,´,´´,´,´´,´,´´,´,´´,´,´ <br />                              
-´,´,/   _____/´,´,´´,´|__|__´__´_´,´_______´,_______´________´,____´,´,____´,´,____´,´,____´,´,____´,´,____ _______ <br />
-´,´,\_____  \´_/ ___\´|´,|´,\\´\/´\/´/\__´,\´\_´,__´\\___´,´/_/´__´\´/    \´_/´__´,\´´/ ___\´,/ ___\_/´__´´\\_´,__´\<br />
-´,´,/´,´,´´,´\\´\___´´|´,Y ´,\\´,´,´/´,/´__´\_|´,|´\/´/´,´,/´\´´___/´|´,´|´\\´,´___/´/´/_/´,>/´/_/´>\´,´___/´|  |´\/<br />
-´,´/_______´,/´\___´,>|___|´,/´\/\_/´,'('____´,/|__|´,´/_____´\´\___´,>|___|´/ \___´,´>\___´,/ \___´,/´,\___´,>|__|´,´   <br />
-  ´,´,´´,´,\/´,´,´´\/´,´,´´\/´,´,´´,´,´´,´,\/´,´,´´,´,´´,´,\/´,´,´\/´,´,´\/´,´,´´,\//_____/´/_____/´,´,´´,\/´,´,´    <br />
+        JOKU HIENO OTSIKKO
       </h1>
 
       <TriviaBox getPoints={getPoints} history={history} setQuestionNumber={() => setQuestionNumber(a => a + 1)} questionNumber={questionNumber} answers={shuffled} question={question} rightAnswer={rightAnswer} level={questions[questionNumber].level} />

@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 
-
 const HallOfFame = ({points, history}) => {
     const [scorecard, setScorecard] = useState({name: '', score: 0})
     
