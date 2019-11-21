@@ -3,4 +3,9 @@ async function fetchData(callback) {
   return res.json();
 };
 
-export { fetchData };
+async function fetchScores(callback) {
+  const res = await fetch("/api/scores");
+  return res.json();
+};
+
+export { fetchData, fetchScores };
