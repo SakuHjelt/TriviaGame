@@ -30,7 +30,7 @@
 .triviaCheckbox {
     height: 1.5em;
     width: 1.5em;
-    color: green;
+    background: black;
     cursor: pointer;
 }
 

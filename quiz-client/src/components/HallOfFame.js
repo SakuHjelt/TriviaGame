@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import '../style/HallOfFame.css'
 
+
+
 const HallOfFame = ({points, history}) => {
     const [scorecard, setScorecard] = useState({name: '', score: 0})
     
