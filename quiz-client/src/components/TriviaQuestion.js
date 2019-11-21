@@ -54,7 +54,6 @@ const TriviaQuestion = ({ getPoints, history, level, answers, question, rightAns
   //       <span className="questionNumber">
   //         {pointCounter}
   //       </span>
-
   //       <div className="PixelArnold"></div>
   //       <br />
   //       <br />
@@ -66,8 +65,6 @@ const TriviaQuestion = ({ getPoints, history, level, answers, question, rightAns
   //         <button className="PixelArnold"></button></Link> */}
   //       <br />
   //       <div className="allChecks">
-
-
   //         <br />
   //         <form>
   //           <span>
@@ -80,7 +77,6 @@ const TriviaQuestion = ({ getPoints, history, level, answers, question, rightAns
   //             <label for="CheckB" className="checkboxLetter">B</label>
   //             <input id="CheckB" onChange={onChange} value={answers[1]} name="checkbox" type="radio" className="triviaCheckbox" /><span className="answerText">{answers[1]}</span>
   //           </span>
-
   //           <br />
   //           <span>
   //             <label for="CheckC" className="checkboxLetter">C</label>
@@ -102,7 +98,6 @@ const TriviaQuestion = ({ getPoints, history, level, answers, question, rightAns
   //     </div>
   //   )
   // }
-
   // export default TriviaQuestion;
 
   return (
@@ -117,7 +112,6 @@ const TriviaQuestion = ({ getPoints, history, level, answers, question, rightAns
     <span className="questionNumber">
         {questionNumber}.
     </span>
-
       <div className="PixelArnold"></div>
       <br />
       C:\SkyNet\QuestionDifficulty:
@@ -132,7 +126,6 @@ const TriviaQuestion = ({ getPoints, history, level, answers, question, rightAns
     <div className="allChecks">
 
 
-
       <br />
       <br />
       C:\SkyNet\Score:
@@ -140,9 +133,6 @@ const TriviaQuestion = ({ getPoints, history, level, answers, question, rightAns
         {pointCounter}
       </span>
       <div className="allChecks">
-
-
-
         <br />
         <form>
           <span>
@@ -178,8 +168,6 @@ const TriviaQuestion = ({ getPoints, history, level, answers, question, rightAns
       <NextButton btnClick={checkCorrect} />
 
     </div>
-
-
   </div>
 )
 
