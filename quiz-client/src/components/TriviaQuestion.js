@@ -38,6 +38,7 @@ const TriviaQuestion = ({ getPoints, history, level, answers, question, rightAns
   }
   getPoints(pointCounter);
 
+
 return (
   <div className="triviaQuestionDiv">
   SkyNet [Version &#8734;&#8734;.&#8734;.&#8734;&#8734;&#8734;&#8734;&#8734;.&#8734;&#8734;&#8734;] <br />
@@ -63,9 +64,7 @@ return (
 <span className="questionNumber">
     {pointCounter}
   </span>
-    
     <div className="allChecks">
-
 
       <br />
       <form>
@@ -73,9 +72,6 @@ return (
           <label for="CheckA" className="checkboxLetter">A </label>
           <button id="CheckA" onClick={onChange} value={answers[0]} name="checkbox" placeholder="A" type="button" className="triviaCheckbox"></button><span className="answerText">{answers[0]}</span>
         </span>
-
-
-
         <br />
         <span>
           <label for="CheckA" className="checkboxLetter">B </label>
@@ -102,7 +98,6 @@ return (
       <span className="questionTitle">{question}</span>
     </div>
     <NextButton btnClick={checkCorrect} />
-
   </div>
 )
 }
