@@ -1,0 +1,12 @@
+.score {
+    border: solid green;
+    border-style: dashed;
+    font-size: 1.5em;
+    letter-spacing: 0.2em;
+    color: green;
+    width: 495px;
+    top: 30%;
+    left: 41%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
