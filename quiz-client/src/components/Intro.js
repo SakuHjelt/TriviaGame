@@ -1,15 +1,19 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import '../style/Intro.css'
 import Arnold from '../pics/arnold.jpg'
 import introMusic from '../sounds/introVer1.mp3';
 import { Link } from 'react-router-dom';
 
-const Intro = () => {
+const Intro = ({ history }) => {
     const [introAudio] = useState(new Audio(introMusic));
 
     useEffect(() => {
         introAudio.play();
     }, [introAudio])
+
+    history.listen( location => {
+        introAudio.pause();
+      })
 
     return (
         <div className="introDiv">
@@ -32,7 +36,7 @@ const Intro = () => {
                     <span className="introSpan">R</span>
                     <br />
                     <h1 className="introH1Quiz">
-                    <span className="introQuiz">QUIZ</span>
+                        <span className="introQuiz">QUIZ</span>
                     </h1>
                 </h1>
                 <Link to="/quiz"><button className="introButton"><span className="introSpan">PLAY</span></button></Link>

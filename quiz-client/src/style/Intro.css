@@ -98,6 +98,7 @@ body {
 }
 
 .introImg {
+    padding: 60px;
     width: 500px;
     height: 600px;
     display: inline-block;

@@ -21,7 +21,7 @@ body {
     color: rgb(0, 185, 0);
     width: 800px;
     top: 10%;
-    left: 50%;
+    left: 60%;
     position: absolute;
     transform: translate(-50%, -50%);
 }
@@ -84,6 +84,7 @@ body {
 
 }
 .gameoverImg {
+    padding: 60px;
     width: 500px;
     height: 600px;
     display: inline-block;
@@ -94,8 +95,8 @@ body {
     font-size: 1.5em;
     letter-spacing: 0.2em;
     color: rgb(0, 185, 0);
-    top: 35%;
-    left: 41%;
+    top: 50%;
+    left: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
 }
