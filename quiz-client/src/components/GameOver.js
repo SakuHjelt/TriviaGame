@@ -3,22 +3,16 @@ import '../style/GameOver.css'
 import GameOverImg from '../pics/gameover.jpg'
 import GameOverMusic from '../sounds/GameOverMusic.mp3';
 
-
-
 const GameOver = (props) => {
     const [gameOverAudio] = useState(new Audio(GameOverMusic));
-    //const pointcounter = props.match.params.no
-    
+    //const pointcounter = props.match.params.no 
 
     useEffect(() => {
         gameOverAudio.play();
         
     }, [gameOverAudio])
 
-
-
     return (
-        
         <div className="gameoverDiv">
                <h2 className="gameoverH2">-GAME OVER-</h2>
                 <section className="gameoverSection">
@@ -30,10 +24,8 @@ const GameOver = (props) => {
             <span className="gameoverSpan">Kaarle, </span>
             <span className="gameoverSpan">Saku</span>
         </h1>
-</section>
-    
-    </div>
-    
+          </section>
+       </div>
     )
 }
 
