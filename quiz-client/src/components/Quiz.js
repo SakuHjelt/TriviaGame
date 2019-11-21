@@ -41,7 +41,7 @@ const Quiz = ({ history }) => {
   useEffect(() => {
     music.play();
     getData();
-  }, [hastalavista])
+  }, [music])
 
   //Tarkista, että antaa oikean pistemäärän eikä esim. yksi liian vähän
   const getPoints = (pointsis) => {
@@ -49,7 +49,7 @@ const Quiz = ({ history }) => {
   }
   
   //Miten saada 10 kysymystä? Kaatuu, jos < 10 - ei tunnista yllä enää arraysta indeksejä, tietenkään
-  if (questionNumber < 9) {
+  if (questionNumber < 10) {
   return (
     <div className="quizPage">
 

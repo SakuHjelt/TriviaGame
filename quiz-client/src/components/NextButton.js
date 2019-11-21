@@ -1,6 +1,6 @@
 import React from 'react';
 import '../style/NextButton.css'
-import ButtonClick from '../sounds/ButtonClick.mp3'
+
 
 
 

@@ -47,7 +47,7 @@ MongoClient.connect(url, function(err, db) {
             itemList.push(item);
         })
     });
-    dbo.collection("levelFour").aggregate([{$sample:{size: 2}}]).toArray(function(err, result) {
+    dbo.collection("levelFour").aggregate([{$sample:{size: 3}}]).toArray(function(err, result) {
       if (err) throw err;
       result.map(item => {
           itemList.push(item);
