@@ -6,14 +6,11 @@ body {
 .questionbox {
   font-size: 0.7em;
   width: 50%;
-  height: 500px;
+  height: 600px;
   top: 50%;
   left: 50%;
   position: absolute;
   transform: translate(-50%, -50%);
   border: solid green;
   border-style: dashed;
-  
-
 }
-

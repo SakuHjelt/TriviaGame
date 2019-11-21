@@ -3,12 +3,12 @@ body {
 }
 
 .quizPage {
-  color: rgb(0, 185, 0);
+  color: rgb(0, 168, 0);
 }
 
 .quizTitle {
   width: 100%;
-  font-size: 0.7em;
+  font-size: 1.7em;
   top: 5%;
   left: 50%;
   position: absolute;

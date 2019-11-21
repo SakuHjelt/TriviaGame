@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import NextButton from './NextButton';
 import '../style/TriviaQuestion.css';
 import '../style/PixelArnold.css';
@@ -48,10 +48,8 @@ const TriviaQuestion = ({ getPoints, history, level, answers, question, rightAns
       <span className="questionNumber">
         {level}
       </span>
-      <Link to="/gameover">
-        <button className="PixelArnold"></button></Link>
-
-
+      {/*       <Link to="/gameover">
+        <button className="PixelArnold"></button></Link> */}
       <br />
       <div className="allChecks">
 
@@ -60,23 +58,25 @@ const TriviaQuestion = ({ getPoints, history, level, answers, question, rightAns
         <form>
           <span>
             <label for="CheckA" className="checkboxLetter">A</label>
-            <input onChange={onChange} value={answers[0]} name="checkbox" placeholder="A" type="radio" className="triviaCheckbox" /><span className="answerText">{answers[0]}</span>
+            <input id="CheckA" onChange={onChange} value={answers[0]} name="checkbox" placeholder="A" type="radio" className="triviaCheckbox" /><span className="answerText">{answers[0]}</span>
           </span>
           <br />
           <span>
             <label for="CheckB" className="checkboxLetter">B</label>
-            <input onChange={onChange} value={answers[1]} name="checkbox" type="radio" className="triviaCheckbox" /><span className="answerText">{answers[1]}</span>
+            <input id="CheckB" onChange={onChange} value={answers[1]} name="checkbox" type="radio" className="triviaCheckbox" /><span className="answerText">{answers[1]}</span>
           </span>
 
           <br />
           <span>
             <label for="CheckC" className="checkboxLetter">C</label>
-            <input onChange={onChange} value={answers[2]} name="checkbox" type="radio" className="triviaCheckbox" /><span className="answerText">{answers[2]}</span>
+            <input id="CheckC" onChange={onChange} value={answers[2]} name="checkbox" type="radio" className="triviaCheckbox" />
+            <span class="checkmark"></span>
+            <span className="answerText">{answers[2]}</span>
           </span>
           <br />
           <div>
             <label for="CheckD" className="checkboxLetter">D</label>
-            <input onChange={onChange} value={answers[3]} name="checkbox" type="radio" className="triviaCheckbox" /><span className="answerText">{answers[3]}</span>
+            <input id="CheckD" onChange={onChange} value={answers[3]} name="checkbox" type="radio" className="triviaCheckbox" /><span className="answerText">{answers[3]}</span>
           </div>
         </form>
       </div>
