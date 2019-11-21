@@ -1,19 +1,36 @@
 import React, { Component } from 'react'
 import '../style/Score.css';
+import { fetchScores } from '../serviceClient';
 
 export default class Score extends Component {
+    state = { scores: [] }
+
+    componentDidMount() {
+        this.fetchScoreList();
+    }
+    fetchScoreList = () => {
+        fetchScores().then(scores => {
+            this.setState({ scores });
+            console.log(scores);
+        })
+    }
+
+
     render() {
         return (
-            <div className="score">
                 <table>
-                    <td>Terminator</td>
-                    <td>Score</td>
-                    <tbody>
-                        <td>{this.props.terminator}</td>
-                        <td>{this.props.score}</td>
+                    <th>Name</th><th>Score</th>
+                <tbody>
+                    {
+                    this.state.scores.map((item) =>{
+                    return <tr key={item._id}>
+                        <td>{item.name}</td>
+                        <td>{item.score}</td>
+                        </tr>
+                    })
+                    }
                     </tbody>
                 </table>
-            </div>
         )
     }
 }

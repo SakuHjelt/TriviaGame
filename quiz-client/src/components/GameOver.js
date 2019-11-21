@@ -16,7 +16,9 @@ const GameOver = (props) => {
     return (
         <div className="gameoverDiv">
                <h2 className="gameoverH2">-GAME OVER-</h2>
-               <Score terminator="Minä" score="5" />
+               <div className="score">
+               <Score/>
+               </div>
                 <section className="gameoverSection">
             <img alt="gameoverImg" src={GameOverImg} className="gameoverImg" />
         <h1 className="gameoverH1">

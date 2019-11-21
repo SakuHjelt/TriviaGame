@@ -1,13 +1,9 @@
-.score {
-    border: solid green;
+td {
+    border: solid;
     border-style: dashed;
-    font-size: 1.5em;
-    letter-spacing: 0.2em;
-    color: rgb(0, 185, 0);
-    width: 495px;
-    top: 30%;
-    left: 41%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.658);
+}
+
+th {
+    border: solid;
+    border-style: dashed;
 }
