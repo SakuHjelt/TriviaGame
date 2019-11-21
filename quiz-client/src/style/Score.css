@@ -3,10 +3,11 @@
     border-style: dashed;
     font-size: 1.5em;
     letter-spacing: 0.2em;
-    color: green;
+    color: rgb(0, 185, 0);
     width: 495px;
     top: 30%;
     left: 41%;
     position: absolute;
     transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.658);
 }

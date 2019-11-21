@@ -7,7 +7,16 @@ import { Link } from 'react-router-dom';
 const TriviaQuestion = ({ getPoints, history, level, answers, question, rightAnswer, questionNumber, setQuestionNumber }) => {
   const [selected, setSelected] = useState();
   const [pointCounter, setPointCounter] = useState(0);
+/*   const [checked, setChecked] = useState({checked: false});
 
+  const checkIt = () => {
+    setChecked({checked: true});
+  };
+
+  const unCheckIt = () => {
+    setChecked({checked: false})
+  }
+ */
   const onChange = (event) => {
     setSelected({ ...selected, [event.target.name]: event.target.value });
   }
@@ -52,8 +61,6 @@ const TriviaQuestion = ({ getPoints, history, level, answers, question, rightAns
         <button className="PixelArnold"></button></Link> */}
       <br />
       <div className="allChecks">
-
-
         <br />
         <form>
           <span>

@@ -30,7 +30,7 @@ const HallOfFame = ({points, history}) => {
                 <p>You have destroyed SkyNet!</p>
                 <form>
                     <div className="nameScore">
-                    <label className="fameLabel">Term</label>
+                    <label className="fameLabel">NAME:<span className="flashingLine">|</span></label>
               
                     <input className="fameInput" type='text'
                         placeholder='_ _ _ _ _ _ _ _'
