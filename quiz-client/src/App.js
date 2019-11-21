@@ -15,7 +15,7 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/" component={FirstPage} />
-          <Route exact path="/intro" component={Intro} />
+          <Route exact path="/intro" render={props => <Intro {...props}/>} />
           <Route exact path="/quiz" render={props => <Quiz {...props} />} />
           <Route exact path="/gameover" component={GameOver} />
           <Route exact path="/hall" component={HallOfFame}/>
