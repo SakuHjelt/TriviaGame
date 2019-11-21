@@ -53,6 +53,7 @@ function createInputs() {
       { question: 'In this movie the villain is hanging on a missile. I pressed the button and said "you`re fired"', correct: 'True Lies', q1: 'Junior', q2: 'Batman & Robin', q3: 'End of Days', q4: 'True Lies', level: 4 },
       { question: 'What was my father`s profession?', correct: 'He was the local chief of police', q1: 'He was a senior physician at local hospital', q2: 'He was a nurse', q3: 'He was the local chief of police', q4: 'He was a major in army', level: 4 }
     ]
+    var scoreObj = [{name: "Mönsiäinen", score: 100}, {name: "Saku", score: 31}, {name: "Kagenuge", score: 24}, {name: "Maria", score: 27}, {name: "Anna", score: 36}]
     dbo.collection("levelOne").insertMany(myobj1, function (err, res) {
       if (err) throw err;
       console.log("Number of documents inserted: " + res.insertedCount);
@@ -69,9 +70,9 @@ function createInputs() {
       if (err) throw err;
       console.log("Number of documents inserted: " + res.insertedCount);
     });
-    dbo.createCollection("hallOfFame", function (err, res) {
+    dbo.collection("hallOfFame").insertMany(scoreObj, function (err, res) {
       if (err) throw err;
-      console.log("Also added hallOfFame");
+      console.log("Number of documents inserted: " + res.insertedCount);
       db.close();
     });
   });
