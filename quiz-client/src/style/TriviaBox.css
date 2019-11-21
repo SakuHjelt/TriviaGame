@@ -1,3 +1,8 @@
+body {
+  background: black;
+
+}
+
 .questionbox {
   font-size: 0.7em;
   width: 50%;
@@ -8,6 +13,7 @@
   transform: translate(-50%, -50%);
   border: solid green;
   border-style: dashed;
+  
 
 }
 

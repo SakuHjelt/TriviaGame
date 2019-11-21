@@ -5,6 +5,8 @@ import './style/App.css';
 import GameOver from './components/GameOver'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import HallOfFame from './components/HallOfFame';
+import FirstPage from './components/FirstPage'
+
 
 
 function App() {
@@ -12,7 +14,8 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          <Route exact path="/" component={Intro} />
+          <Route exact path="/" component={FirstPage} />
+          <Route exact path="/intro" component={Intro} />
           <Route exact path="/quiz" render={props => <Quiz {...props} />} />
           <Route exact path="/gameover" component={GameOver} />
           <Route exact path="/hall" component={HallOfFame}/>

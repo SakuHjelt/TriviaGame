@@ -1,0 +1,44 @@
+.addScoreDiv {
+    color: rgb(0, 185, 0);
+    font-size: 3em;
+    letter-spacing: 0.2em;
+    width: 100%;
+    top: 30%;
+    left: 60%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.nameScore {
+    top: 150%;
+    left: 20%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    
+}
+
+.fameInput {
+    background: transparent;
+    border: none;
+    color: red;
+    font-size: 1em;
+}
+
+.fameButton {
+    width: 400px;
+    height: 150px;
+    top: 150%;
+    left: 40%;
+    font-size: 1em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: red;
+    background: rgb(72, 72, 72);
+    animation: blinker 3.5s linear infinite;
+  }
+  @keyframes blinker {
+    70% {
+      opacity: 0;
+    }
+  
+}
