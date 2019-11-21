@@ -89,3 +89,13 @@ body {
     display: inline-block;
 
 }
+
+.score {
+    font-size: 1.5em;
+    letter-spacing: 0.2em;
+    color: rgb(0, 185, 0);
+    top: 35%;
+    left: 41%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
