@@ -11,7 +11,6 @@ export default class Score extends Component {
     fetchScoreList = () => {
         fetchScores().then(scores => {
             this.setState({ scores });
-            console.log(scores);
         })
     }
 
