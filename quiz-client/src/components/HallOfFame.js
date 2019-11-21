@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+/* import React, { Component } from 'react'
 import '..style/HallOfFame.css'
 import { rightAnswer } from './TriviaQuestion'
 export default class HallOfFame extends Component {
@@ -38,3 +38,4 @@ export default class HallOfFame extends Component {
         )
     }
 }
+ */
