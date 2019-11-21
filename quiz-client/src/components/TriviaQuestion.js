@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import NextButton from './NextButton';
 import '../style/TriviaQuestion.css';
 import '../style/PixelArnold.css';
 import { Link } from 'react-router-dom';
 
-const TriviaQuestion = ({ history, level, answers, question, rightAnswer, questionNumber, setQuestionNumber }) => {
+const TriviaQuestion = ({ getPoints, history, level, answers, question, rightAnswer, questionNumber, setQuestionNumber }) => {
   const [selected, setSelected] = useState();
   const [pointCounter, setPointCounter] = useState(0);
 
@@ -13,22 +13,17 @@ const TriviaQuestion = ({ history, level, answers, question, rightAnswer, questi
   }
 
   const checkCorrect = () => {
-    console.log("selected: ", selected)
     if (selected === undefined) {
       alert("You must choose!");
-    } else if (questionNumber < 9) {
+    } else {
       setQuestionNumber();
       if (selected.checkbox === rightAnswer) {
         setPointCounter(a => a + 1);
-        console.log(pointCounter)
       }
-      console.log(pointCounter)
-    } else {
-      console.log('blöö')
-      history.push("/gameover");
     }
-   
   }
+
+  getPoints(pointCounter);
 
   return (
     <div className="triviaQuestionDiv">
@@ -37,7 +32,7 @@ const TriviaQuestion = ({ history, level, answers, question, rightAnswer, questi
       C:\SkyNet <br />
       C:\SkyNet\QuestionNumber:
       <span className="questionNumber">
-        {questionNumber}.
+        {questionNumber+1}.
       </span>
       <br />
       C:\SkyNet\Score:
@@ -51,7 +46,7 @@ const TriviaQuestion = ({ history, level, answers, question, rightAnswer, questi
       <br />
       C:\SkyNet\Level:
       <span className="questionNumber">
-        {level
+        {level}
       </span>
       <Link to="/gameover">
         <button className="PixelArnold"></button></Link>
