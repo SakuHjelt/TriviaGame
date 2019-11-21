@@ -43,12 +43,10 @@ const Quiz = ({ history }) => {
     getData();
   }, [music])
 
-  //Tarkista, että antaa oikean pistemäärän eikä esim. yksi liian vähän
   const getPoints = (pointsis) => {
     setPoints(pointsis);
   }
-  
-  //Miten saada 10 kysymystä? Kaatuu, jos < 10 - ei tunnista yllä enää arraysta indeksejä, tietenkään
+
   if (questionNumber < 10) {
   return (
     <div className="quizPage">

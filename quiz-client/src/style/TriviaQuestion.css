@@ -1,24 +1,26 @@
-
-
 .triviaQuestionDiv {
     width: auto;
     padding: 10px;
     font-size: 1.5em;
-    color: green;
+    color: rgb(0, 185, 0);
     text-align: left;
+
+}
+
+.questionbox {
+    width: 900px;
 }
 
 .questionTitle {
     float: right;
-    font-size: 1em;
-    width: 380px;
+    font-size: 0.8em;
+    width: 800px;
     height: 500px;
-    top: 120%;
-    left: 59%;
+    top: 100%;
+    left: 100%;
     position: absolute;
     transform: translate(-50%, -50%);
     word-wrap: break-word;
-
 }
 
 .checkboxLetter {
@@ -28,10 +30,9 @@
 .triviaCheckbox {
     height: 1.5em;
     width: 1.5em;
-    ;
+    color: green;
+    cursor: pointer;
 }
-
-
 
 .questionNumber {
     color: red;
@@ -54,19 +55,18 @@
     left: 52%;
     position: absolute;
     transform: translate(-50%, -50%);
-    
 }
 
 .singleQuestion {
     color: red; 
     font-size: 1.7em;
     width: 50px;
-    
-    top: 120%;
-    left: 59%;
+    top: 115%;
+    left: 50%;
     position: absolute;
     transform: translate(-50%, -50%); 
-    
+    text-overflow: inherit;
+    word-wrap: break-word;
 }
 
 .answerText {
