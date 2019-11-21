@@ -7,162 +7,167 @@ import { Link } from 'react-router-dom';
 const TriviaQuestion = ({ getPoints, history, level, answers, question, rightAnswer, questionNumber, setQuestionNumber }) => {
   const [selected, setSelected] = useState();
   const [pointCounter, setPointCounter] = useState(0);
-/*   const [checked, setChecked] = useState({checked: false});
-
-  const checkIt = () => {
-    setChecked({checked: true});
-  };
-
-  const unCheckIt = () => {
-    setChecked({checked: false})
-  }
- */
+  /*   const [checked, setChecked] = useState({checked: false});
+  
+    const checkIt = () => {
+      setChecked({checked: true});
+    };
+  
+    const unCheckIt = () => {
+      setChecked({checked: false})
+    }
+   */
   const onChange = (event) => {
     setSelected({ ...selected, [event.target.name]: event.target.value });
   }
-
+  console.log(question)
   const checkCorrect = () => {
-    if (selected === undefined) {
-      alert("You must choose!");
+    if (question === "I wanna ask you a bunch of questions...") {
+      alert('"I am not done talking yet!" -Schwarzenegger')
     } else {
-      setQuestionNumber();
-      if (selected.checkbox === rightAnswer) {
-        setPointCounter(a => a + 1);
+      if (selected === undefined) {
+        alert("You must choose!");
+      } else {
+        setQuestionNumber();
+        if (selected.checkbox === rightAnswer) {
+          setPointCounter(a => a + 1);
+        }
+        setSelected();
       }
     }
   }
 
   getPoints(pointCounter);
 
-//   return (
-//     <div className="triviaQuestionDiv">
-//       SkyNet [Version &#8734;&#8734;.&#8734;.&#8734;&#8734;&#8734;&#8734;&#8734;.&#8734;&#8734;&#8734;] <br />
-//       (c) @ 80's Cyberyne Systems Corporation. All rights reserved. <br />
-//       C:\SkyNet <br />
-//       C:\SkyNet\QuestionNumber:
-//       <span className="questionNumber">
-//         {questionNumber}.
-//       </span>
-//       <br />
-//       C:\SkyNet\Score:
-//       <span className="questionNumber">
-//         {pointCounter}
-//       </span>
+  //   return (
+  //     <div className="triviaQuestionDiv">
+  //       SkyNet [Version &#8734;&#8734;.&#8734;.&#8734;&#8734;&#8734;&#8734;&#8734;.&#8734;&#8734;&#8734;] <br />
+  //       (c) @ 80's Cyberyne Systems Corporation. All rights reserved. <br />
+  //       C:\SkyNet <br />
+  //       C:\SkyNet\QuestionNumber:
+  //       <span className="questionNumber">
+  //         {questionNumber}.
+  //       </span>
+  //       <br />
+  //       C:\SkyNet\Score:
+  //       <span className="questionNumber">
+  //         {pointCounter}
+  //       </span>
 
-//       <div className="PixelArnold"></div>
-//       <br />
-//       <br />
-//       C:\SkyNet\Level:
-//       <span className="questionNumber">
-//         {level}
-//       </span>
-//       {/*       <Link to="/gameover">
-//         <button className="PixelArnold"></button></Link> */}
-//       <br />
-//       <div className="allChecks">
-
-
-//         <br />
-//         <form>
-//           <span>
-//             <label for="CheckA" className="checkboxLetter">A</label>
-//             <input id="CheckA" onChange={onChange} value={answers[0]} name="checkbox" placeholder="A" type="radio" className="triviaCheckbox" />
-//             <span className="answerText">{answers[0]}</span>
-//           </span>
-//           <br />
-//           <span>
-//             <label for="CheckB" className="checkboxLetter">B</label>
-//             <input id="CheckB" onChange={onChange} value={answers[1]} name="checkbox" type="radio" className="triviaCheckbox" /><span className="answerText">{answers[1]}</span>
-//           </span>
-
-//           <br />
-//           <span>
-//             <label for="CheckC" className="checkboxLetter">C</label>
-//             <input id="CheckC" onChange={onChange} value={answers[2]} name="checkbox" type="radio" className="triviaCheckbox" />
-//             <span class="checkmark"></span>
-//             <span className="answerText">{answers[2]}</span>
-//           </span>
-//           <br />
-//           <div>
-//             <label for="CheckD" className="checkboxLetter">D</label>
-//             <input id="CheckD" onChange={onChange} value={answers[3]} name="checkbox" type="radio" className="triviaCheckbox" /><span className="answerText">{answers[3]}</span>
-//           </div>
-//         </form>
-//       </div>
-//       <div className="singleQuestion">
-//         <span className="questionTitle">{question}</span>
-//       </div>
-//       <NextButton btnClick={checkCorrect} />
-//     </div>
-//   )
-// }
-
-// export default TriviaQuestion;
-
-return (
-  <div className="triviaQuestionDiv">
-    SkyNet [Version &#8734;&#8734;.&#8734;.&#8734;&#8734;&#8734;&#8734;&#8734;.&#8734;&#8734;&#8734;] <br />
-    (c) @ 80's Cyberyne Systems Corporation. All rights reserved. <br />
-    C:\SkyNet <br />
-    C:\SkyNet\QuestionNumber:
-    <span className="questionNumber">
-      {questionNumber}.
-    </span>
-    <br />
-    C:\SkyNet\Score:
-    <span className="questionNumber">
-      {pointCounter}
-    </span>
-
-    <div className="PixelArnold"></div>
-
-    <br />
-    <br />
-    C:\SkyNet\Level:
-    <span className="questionNumber">
-      {level}
-    </span>
-    {/*       <Link to="/gameover">
-      <button className="PixelArnold"></button></Link> */}
-    <br />
-    <div className="allChecks">
+  //       <div className="PixelArnold"></div>
+  //       <br />
+  //       <br />
+  //       C:\SkyNet\Level:
+  //       <span className="questionNumber">
+  //         {level}
+  //       </span>
+  //       {/*       <Link to="/gameover">
+  //         <button className="PixelArnold"></button></Link> */}
+  //       <br />
+  //       <div className="allChecks">
 
 
+  //         <br />
+  //         <form>
+  //           <span>
+  //             <label for="CheckA" className="checkboxLetter">A</label>
+  //             <input id="CheckA" onChange={onChange} value={answers[0]} name="checkbox" placeholder="A" type="radio" className="triviaCheckbox" />
+  //             <span className="answerText">{answers[0]}</span>
+  //           </span>
+  //           <br />
+  //           <span>
+  //             <label for="CheckB" className="checkboxLetter">B</label>
+  //             <input id="CheckB" onChange={onChange} value={answers[1]} name="checkbox" type="radio" className="triviaCheckbox" /><span className="answerText">{answers[1]}</span>
+  //           </span>
+
+  //           <br />
+  //           <span>
+  //             <label for="CheckC" className="checkboxLetter">C</label>
+  //             <input id="CheckC" onChange={onChange} value={answers[2]} name="checkbox" type="radio" className="triviaCheckbox" />
+  //             <span class="checkmark"></span>
+  //             <span className="answerText">{answers[2]}</span>
+  //           </span>
+  //           <br />
+  //           <div>
+  //             <label for="CheckD" className="checkboxLetter">D</label>
+  //             <input id="CheckD" onChange={onChange} value={answers[3]} name="checkbox" type="radio" className="triviaCheckbox" /><span className="answerText">{answers[3]}</span>
+  //           </div>
+  //         </form>
+  //       </div>
+  //       <div className="singleQuestion">
+  //         <span className="questionTitle">{question}</span>
+  //       </div>
+  //       <NextButton btnClick={checkCorrect} />
+  //     </div>
+  //   )
+  // }
+
+  // export default TriviaQuestion;
+
+  return (
+    <div className="triviaQuestionDiv">
+      SkyNet [Version &#8734;&#8734;.&#8734;.&#8734;&#8734;&#8734;&#8734;&#8734;.&#8734;&#8734;&#8734;] <br />
+      (c) @ 80's Cyberdyne Systems Corporation. All rights reserved. <br />
+      C:\SkyNet
       <br />
-      <form>
-        <span>
-          <label for="CheckA" className="checkboxLetter">A </label>
-          <button id="CheckA" onClick={onChange} value={answers[0]} name="checkbox" placeholder="A" type="button" className="triviaCheckbox"></button><span className="answerText">{answers[0]}</span>
-          
-        </span>
+      <br />
+      C:\SkyNet\QuestionNumber:
+    <span className="questionNumber">
+        {questionNumber}.
+    </span>
+
+      <div className="PixelArnold"></div>
+      <br />
+      C:\SkyNet\QuestionDifficulty:
+    <span className="questionNumber">
+        level {level}
+      </span>
+      {/*       <Link to="/gameover">
+      <button className="PixelArnold"></button></Link> */}
+      <br />
+      <br />
+      C:\SkyNet\Score:
+    <span className="questionNumber">
+        {pointCounter}
+      </span>
+      <div className="allChecks">
+
+
         <br />
-        <span>
-          <label for="CheckA" className="checkboxLetter">B </label>
-          <button id="CheckA" onClick={onChange} value={answers[1]} name="checkbox" placeholder="A" type="button" className="triviaCheckbox"></button><span className="answerText">{answers[1]}</span>
-          
-        </span>
-        <br />
-        <span>
-          <label for="CheckA" className="checkboxLetter">C </label>
-          <button id="CheckA" onClick={onChange} value={answers[2]} name="checkbox" placeholder="A" type="button" className="triviaCheckbox"></button><span className="answerText">{answers[2]}</span>
-          
-        </span>
-        <br />
-        <div>
-        <span>
-          <label for="CheckA" className="checkboxLetter">D </label>
-          <button id="CheckA" onClick={onChange} value={answers[3]} name="checkbox" placeholder="A" type="button" className="triviaCheckbox"></button><span className="answerText">{answers[3]}</span>
-          
-        </span>
-        </div>
-      </form>
+        <form>
+          <span>
+            <label for="CheckA" className="checkboxLetter">A </label>
+            <button id="CheckA" onClick={onChange} value={answers[0]} name="checkbox" placeholder="A" type="button" className="triviaCheckbox"></button><span className="answerText">{answers[0]}</span>
+
+          </span>
+          <br />
+          <span>
+            <label for="CheckA" className="checkboxLetter">B </label>
+            <button id="CheckA" onClick={onChange} value={answers[1]} name="checkbox" placeholder="A" type="button" className="triviaCheckbox"></button><span className="answerText">{answers[1]}</span>
+
+          </span>
+          <br />
+          <span>
+            <label for="CheckA" className="checkboxLetter">C </label>
+            <button id="CheckA" onClick={onChange} value={answers[2]} name="checkbox" placeholder="A" type="button" className="triviaCheckbox"></button><span className="answerText">{answers[2]}</span>
+
+          </span>
+          <br />
+          <div>
+            <span>
+              <label for="CheckA" className="checkboxLetter">D </label>
+              <button id="CheckA" onClick={onChange} value={answers[3]} name="checkbox" placeholder="A" type="button" className="triviaCheckbox"></button><span className="answerText">{answers[3]}</span>
+
+            </span>
+          </div>
+        </form>
+      </div>
+      <div className="singleQuestion">
+        <span className="questionTitle">{question}</span>
+      </div>
+      <NextButton btnClick={checkCorrect} />
     </div>
-    <div className="singleQuestion">
-      <span className="questionTitle">{question}</span>
-    </div>
-    <NextButton btnClick={checkCorrect} />
-  </div>
-)
+  )
 }
 
 export default TriviaQuestion;
