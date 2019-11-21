@@ -25,67 +25,136 @@ const TriviaQuestion = ({ getPoints, history, level, answers, question, rightAns
 
   getPoints(pointCounter);
 
-  return (
-    <div className="triviaQuestionDiv">
-      SkyNet [Version &#8734;&#8734;.&#8734;.&#8734;&#8734;&#8734;&#8734;&#8734;.&#8734;&#8734;&#8734;] <br />
-      (c) @ 80's Cyberyne Systems Corporation. All rights reserved. <br />
-      C:\SkyNet <br />
-      C:\SkyNet\QuestionNumber:
-      <span className="questionNumber">
-        {questionNumber}.
-      </span>
-      <br />
-      C:\SkyNet\Score:
-      <span className="questionNumber">
-        {pointCounter}
-      </span>
+//   return (
+//     <div className="triviaQuestionDiv">
+//       SkyNet [Version &#8734;&#8734;.&#8734;.&#8734;&#8734;&#8734;&#8734;&#8734;.&#8734;&#8734;&#8734;] <br />
+//       (c) @ 80's Cyberyne Systems Corporation. All rights reserved. <br />
+//       C:\SkyNet <br />
+//       C:\SkyNet\QuestionNumber:
+//       <span className="questionNumber">
+//         {questionNumber}.
+//       </span>
+//       <br />
+//       C:\SkyNet\Score:
+//       <span className="questionNumber">
+//         {pointCounter}
+//       </span>
 
-      <div className="PixelArnold"></div>
+//       <div className="PixelArnold"></div>
+
+//       <br />
+//       <br />
+//       C:\SkyNet\Level:
+//       <span className="questionNumber">
+//         {level}
+//       </span>
+//       {/*       <Link to="/gameover">
+//         <button className="PixelArnold"></button></Link> */}
+//       <br />
+//       <div className="allChecks">
+
+
+//         <br />
+//         <form>
+//           <span>
+//             <label for="CheckA" className="checkboxLetter">A</label>
+//             <input id="CheckA" onChange={onChange} value={answers[0]} name="checkbox" placeholder="A" type="radio" className="triviaCheckbox" />
+//             <span className="answerText">{answers[0]}</span>
+//           </span>
+//           <br />
+//           <span>
+//             <label for="CheckB" className="checkboxLetter">B</label>
+//             <input id="CheckB" onChange={onChange} value={answers[1]} name="checkbox" type="radio" className="triviaCheckbox" /><span className="answerText">{answers[1]}</span>
+//           </span>
+
+//           <br />
+//           <span>
+//             <label for="CheckC" className="checkboxLetter">C</label>
+//             <input id="CheckC" onChange={onChange} value={answers[2]} name="checkbox" type="radio" className="triviaCheckbox" />
+//             <span class="checkmark"></span>
+//             <span className="answerText">{answers[2]}</span>
+//           </span>
+//           <br />
+//           <div>
+//             <label for="CheckD" className="checkboxLetter">D</label>
+//             <input id="CheckD" onChange={onChange} value={answers[3]} name="checkbox" type="radio" className="triviaCheckbox" /><span className="answerText">{answers[3]}</span>
+//           </div>
+//         </form>
+//       </div>
+//       <div className="singleQuestion">
+//         <span className="questionTitle">{question}</span>
+//       </div>
+//       <NextButton btnClick={checkCorrect} />
+//     </div>
+//   )
+// }
+
+// export default TriviaQuestion;
+
+return (
+  <div className="triviaQuestionDiv">
+    SkyNet [Version &#8734;&#8734;.&#8734;.&#8734;&#8734;&#8734;&#8734;&#8734;.&#8734;&#8734;&#8734;] <br />
+    (c) @ 80's Cyberyne Systems Corporation. All rights reserved. <br />
+    C:\SkyNet <br />
+    C:\SkyNet\QuestionNumber:
+    <span className="questionNumber">
+      {questionNumber}.
+    </span>
+    <br />
+    C:\SkyNet\Score:
+    <span className="questionNumber">
+      {pointCounter}
+    </span>
+
+    <div className="PixelArnold"></div>
+
+    <br />
+    <br />
+    C:\SkyNet\Level:
+    <span className="questionNumber">
+      {level}
+    </span>
+    {/*       <Link to="/gameover">
+      <button className="PixelArnold"></button></Link> */}
+    <br />
+    <div className="allChecks">
+
 
       <br />
-      <br />
-      C:\SkyNet\Level:
-      <span className="questionNumber">
-        {level}
-      </span>
-      {/*       <Link to="/gameover">
-        <button className="PixelArnold"></button></Link> */}
-      <br />
-      <div className="allChecks">
-
-
+      <form>
+        <span>
+          <label for="CheckA" className="checkboxLetter">A </label>
+          <button id="CheckA" onClick={onChange} value={answers[0]} name="checkbox" placeholder="A" type="button" className="triviaCheckbox"></button><span className="answerText">{answers[0]}</span>
+          
+        </span>
         <br />
-        <form>
-          <span>
-            <label for="CheckA" className="checkboxLetter">A</label>
-            <input id="CheckA" onChange={onChange} value={answers[0]} name="checkbox" placeholder="A" type="radio" className="triviaCheckbox" /><span className="answerText">{answers[0]}</span>
-          </span>
-          <br />
-          <span>
-            <label for="CheckB" className="checkboxLetter">B</label>
-            <input id="CheckB" onChange={onChange} value={answers[1]} name="checkbox" type="radio" className="triviaCheckbox" /><span className="answerText">{answers[1]}</span>
-          </span>
-
-          <br />
-          <span>
-            <label for="CheckC" className="checkboxLetter">C</label>
-            <input id="CheckC" onChange={onChange} value={answers[2]} name="checkbox" type="radio" className="triviaCheckbox" />
-            <span class="checkmark"></span>
-            <span className="answerText">{answers[2]}</span>
-          </span>
-          <br />
-          <div>
-            <label for="CheckD" className="checkboxLetter">D</label>
-            <input id="CheckD" onChange={onChange} value={answers[3]} name="checkbox" type="radio" className="triviaCheckbox" /><span className="answerText">{answers[3]}</span>
-          </div>
-        </form>
-      </div>
-      <div className="singleQuestion">
-        <span className="questionTitle">{question}</span>
-      </div>
-      <NextButton btnClick={checkCorrect} />
+        <span>
+          <label for="CheckA" className="checkboxLetter">B </label>
+          <button id="CheckA" onClick={onChange} value={answers[1]} name="checkbox" placeholder="A" type="button" className="triviaCheckbox"></button><span className="answerText">{answers[1]}</span>
+          
+        </span>
+        <br />
+        <span>
+          <label for="CheckA" className="checkboxLetter">C </label>
+          <button id="CheckA" onClick={onChange} value={answers[2]} name="checkbox" placeholder="A" type="button" className="triviaCheckbox"></button><span className="answerText">{answers[2]}</span>
+          
+        </span>
+        <br />
+        <div>
+        <span>
+          <label for="CheckA" className="checkboxLetter">D </label>
+          <button id="CheckA" onClick={onChange} value={answers[3]} name="checkbox" placeholder="A" type="button" className="triviaCheckbox"></button><span className="answerText">{answers[3]}</span>
+          
+        </span>
+        </div>
+      </form>
     </div>
-  )
+    <div className="singleQuestion">
+      <span className="questionTitle">{question}</span>
+    </div>
+    <NextButton btnClick={checkCorrect} />
+  </div>
+)
 }
 
 export default TriviaQuestion;
