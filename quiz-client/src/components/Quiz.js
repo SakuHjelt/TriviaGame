@@ -8,11 +8,10 @@ import HallOfFame from './HallOfFame'
 const Quiz = ({ history }) => {
   const [music] = useState(new Audio(questionMusic));
   const [questions, setQuestions] = useState([{
-
-    question: "A little question for you:",
+    question: "I wanna ask you a bunch of questions...",
     options: ["a", "b", "c", "d"]
-
   }]);
+
   const [questionNumber, setQuestionNumber] = useState(0);
   const [points, setPoints] = useState(0);
 
@@ -47,21 +46,20 @@ const Quiz = ({ history }) => {
     setPoints(pointsis);
   }
 
+  history.listen( location => {
+    music.pause();
+  })
+
   if (questionNumber < 10) {
-  return (
-    <div className="quizPage">
+    return (
+      <div className="quizPage">
+        <TriviaBox getPoints={getPoints} history={history} setQuestionNumber={() => setQuestionNumber(a => a + 1)} questionNumber={questionNumber} answers={shuffled} question={question} rightAnswer={rightAnswer} level={questions[questionNumber].level} />
 
-      <h1 className="quizTitle">
-        JOKU HIENO OTSIKKO
-      </h1>
+      </div>
+    )
+  }
 
-      <TriviaBox getPoints={getPoints} history={history} setQuestionNumber={() => setQuestionNumber(a => a + 1)} questionNumber={questionNumber} answers={shuffled} question={question} rightAnswer={rightAnswer} level={questions[questionNumber].level} />
-
-    </div>
-  )
-}
-
-return <HallOfFame history={history} points={points}/>
+  return <HallOfFame history={history} points={points} />
 };
 
 export default Quiz;

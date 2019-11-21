@@ -24,11 +24,15 @@
     font-size: 1em;
 }
 
+.flashingLine {
+  animation: blinker 0.5s linear infinite;
+}
+
 .fameButton {
     width: 400px;
     height: 150px;
     top: 150%;
-    left: 40%;
+    left: 50%;
     font-size: 1em;
     position: absolute;
     transform: translate(-50%, -50%);

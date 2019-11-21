@@ -1,11 +1,6 @@
 import React from 'react';
 import '../style/NextButton.css'
 
-
-
-
-
-
 const NextButton = ({btnClick}) => {
   
   return(
