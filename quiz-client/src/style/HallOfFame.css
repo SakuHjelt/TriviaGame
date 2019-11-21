@@ -14,14 +14,17 @@
     left: 20%;
     position: absolute;
     transform: translate(-50%, -50%);
+
     
 }
 
 .fameInput {
+  width: 38%;
     background: transparent;
     border: none;
     color: red;
     font-size: 1em;
+    outline: none;
 }
 
 .flashingLine {
