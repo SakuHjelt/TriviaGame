@@ -1,14 +1,11 @@
 // import React, { Component } from 'react'
 // import '..style/HallOfFame.css'
 // import {  } from './TriviaQuestion'
-
-
 // export default class HallOfFame extends Component {
 //     state = { name: '', score: { count } }
 //     handleNameChange = (e) => {
 //         this.setState({ name: e.targetvalue })
 //     }
-
 //     handleCreateClick = e => {
 //         e.preventDefault();
 //         PostScore(this.state).then(response => {
@@ -16,7 +13,6 @@
 //             this.props.history.push('/GameOver');
 //         })
 //     }
-
 //     render() {
 //         return (
 //             <div className="addScoreDiv">
@@ -35,7 +31,6 @@
 //                         onClick={this.handleCreateClick}
 //                     >| To The Hall Of Fame |</button>
 //                 </form>
-
 //             </div>
 //         )
 //     }
