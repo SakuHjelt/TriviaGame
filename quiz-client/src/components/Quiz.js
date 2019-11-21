@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import TriviaBox from './TriviaBox';
 import '../style/Quiz.css';
-import buttonSound from '../sounds/hastalavista.mp3';
+import questionMusic from '../sounds/questionMusic.mp3';
 import { fetchData } from '../serviceClient';
 
 const Quiz = ({ history }) => {
-  const [hastalavista] = useState(new Audio(buttonSound));
+  const [music] = useState(new Audio(questionMusic));
   const [questions, setQuestions] = useState([{
 
     question: "A little question for you:",
@@ -37,7 +37,7 @@ const Quiz = ({ history }) => {
   };
 
   useEffect(() => {
-    hastalavista.play();
+    music.play();
     getData();
   }, [])
 

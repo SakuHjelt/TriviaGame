@@ -33,7 +33,7 @@ const TriviaQuestion = ({ history, level, answers, question, rightAnswer, questi
   return (
     <div className="triviaQuestionDiv">
       SkyNet [Version &#8734;&#8734;.&#8734;.&#8734;&#8734;&#8734;&#8734;&#8734;.&#8734;&#8734;&#8734;] <br />
-      (c) 4019 Cyberyne Systems Corporation. All rights reserved. <br />
+      (c) @ 80's Cyberyne Systems Corporation. All rights reserved. <br />
       C:\SkyNet <br />
       C:\SkyNet\QuestionNumber:
       <span className="questionNumber">
