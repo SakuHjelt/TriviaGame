@@ -132,6 +132,7 @@ body {
     font-family: 'Terminator Cyr Semi-expanded Bold', arial;
     letter-spacing: 0.2em;
     color: black;
+    outline: none;
 }
 
 .introButton span {

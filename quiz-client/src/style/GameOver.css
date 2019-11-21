@@ -85,6 +85,7 @@ body {
     left: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.63);
 }
 
 .playAgainButton {
@@ -92,7 +93,7 @@ body {
     width: 500px;
     margin: 0;
     padding: 0;
-    background: black;
+    background: rgba(0, 0, 0, 0.63);
     border: none;
     cursor: crosshair;
     text-align: center;
