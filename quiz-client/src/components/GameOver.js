@@ -15,10 +15,12 @@ const GameOver = (props) => {
         
     }, [gameOverAudio])
 
+
+
     return (
         
         <div className="gameoverDiv">
-               <h2 class="gameoverH2">-GAME OVER-</h2>
+               <h2 className="gameoverH2">-GAME OVER-</h2>
                 <section className="gameoverSection">
             <img alt="gameoverImg" src={GameOverImg} className="gameoverImg" />
         <h1 className="gameoverH1">
@@ -28,8 +30,7 @@ const GameOver = (props) => {
             <span className="gameoverSpan">Kaarle, </span>
             <span className="gameoverSpan">Saku</span>
         </h1>
-
-    </section>
+</section>
     
     </div>
     

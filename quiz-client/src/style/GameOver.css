@@ -1,8 +1,8 @@
-.gameoverDikkv{
+.gameoverDimppuv{
     margin: 0;
     padding: 0;
     overflow: hidden;
-    opacity: 0;
+    opacity: 1;
     -webkit-transition: opacity 60s ease-out;
        -moz-transition: opacity 60s ease-out;
         -ms-transition: opacity 60s ease-out;
