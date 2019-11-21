@@ -1,7 +1,7 @@
 const MongoClient = require('mongodb').MongoClient;
 const url = 'mongodb://localhost:27017/arnold';
 const crmongo = require('./create');
-const ObjectId = require('mongodb').ObjectId;
+const arrmongo = require('./arrayhand')
 
 /*MongoClient.connect(url, function(err, db) {
     if (err) {
@@ -59,18 +59,60 @@ MongoClient.connect(url, function(err, db) {
 }
 
 function createNick(req, callback) {
-MongoClient.connect(url, function(err, db) {
-  if (err) throw err;
-  var dbo = db.db("arnold");
-  var myobj = req.body;
-  dbo.collection("results").insertOne(myobj, function(err, res) {
+    MongoClient.connect(url, function(err, db) {
+      if (err) throw err;
+      var dbo = db.db("arnold");
+      var myobj = req.body;
+      let coll = dbo.collection('hallOfFame');
+      let number = coll.countDocuments()
+      console.log(number)
+      dbo.collection("hallOfFame").insertOne(myobj, function(err, res) {
+        if (err) throw err;
+        console.log("Nick added to the list");
+        db.close();
+        callback('Hall of fame updated')
+      });
+    });
+  }
+
+/*  function createNick2(req, callback) {
+  //const moi = arrmongo.countDocs();
+  console.log(moi)
+  //if (arrmongo.countDocs() <= 10) {
+    MongoClient.connect(url, function(err, db) {
+      if (err) throw err;
+      var dbo = db.db("arnold");
+      var myobj = req.body;
+      dbo.collection("hallOfFame").insertOne(myobj, function(err, res) {
+        if (err) throw err;
+        console.log("Nick added to the list");
+        db.close();
+        callback('Hall of fame updated')
+      });
+    });
+  /*} else {
+  const itemlist = arrmongo.doArray();
+  const newlist = arrmongo.sortArrayOfObjects(itemlist, "score");
+
+  for (let i=0; i<newlist.length; i++) {
+    if (req.body.score > newlist[i].score) {
+      newlist.pop();
+      newlist.push(req.body);
+    } 
+  }
+
+  MongoClient.connect(url, function(err, db) {
     if (err) throw err;
-    console.log("Nick added to the list");
-    db.close();
-    callback('Hall of fame updated')
+    var dbo = db.db("arnold");
+    var myobj = newlist;
+    dbo.collection("levelOne").insertMany(myobj, function(err, res) {
+      if (err) throw err;
+      console.log("Number of documents inserted: " + res.insertedCount);
+      db.close();
+    });
   });
-});
-}
+}+
+}*/
 
 
 

@@ -9,12 +9,12 @@ const Intro = () => {
 
     useEffect(() => {
         introAudio.play();
-    }, [])
+    }, [introAudio])
 
     return (
         <div className="introDiv">
             <section className="introSection">
-                <img src={Arnold} className="introImg" />
+                <img alt="introImg" src={Arnold} className="introImg" />
                 <h1 className="introH1">
                     <span className="introSpan">S</span>
                     <span className="introSpan">C</span>

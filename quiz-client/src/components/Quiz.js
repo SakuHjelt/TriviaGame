@@ -3,6 +3,7 @@ import TriviaBox from './TriviaBox';
 import '../style/Quiz.css';
 import questionMusic from '../sounds/questionMusic.mp3';
 import { fetchData } from '../serviceClient';
+import HallOfFame from './HallOfFame'
 
 const Quiz = ({ history }) => {
   const [music] = useState(new Audio(questionMusic));
@@ -13,6 +14,7 @@ const Quiz = ({ history }) => {
 
   }]);
   const [questionNumber, setQuestionNumber] = useState(0);
+  const [points, setPoints] = useState(0);
 
   const question = questions[questionNumber].question;
   const rightAnswer = questions[questionNumber].correct;
@@ -39,19 +41,29 @@ const Quiz = ({ history }) => {
   useEffect(() => {
     music.play();
     getData();
-  }, [])
+  }, [hastalavista])
 
+  //Tarkista, että antaa oikean pistemäärän eikä esim. yksi liian vähän
+  const getPoints = (pointsis) => {
+    setPoints(pointsis);
+  }
+  
+  //Miten saada 10 kysymystä? Kaatuu, jos < 10 - ei tunnista yllä enää arraysta indeksejä, tietenkään
+  if (questionNumber < 9) {
   return (
     <div className="quizPage">
 
       <h1 className="quizTitle">
-JOKU HIENO OTSIKKO
+        JOKU HIENO OTSIKKO
       </h1>
 
-      <TriviaBox history={history} setQuestionNumber={() => setQuestionNumber(a => a + 1)} questionNumber={questionNumber} answers={shuffled} question={question} rightAnswer={rightAnswer} level={questions[questionNumber].level} />
+      <TriviaBox getPoints={getPoints} history={history} setQuestionNumber={() => setQuestionNumber(a => a + 1)} questionNumber={questionNumber} answers={shuffled} question={question} rightAnswer={rightAnswer} level={questions[questionNumber].level} />
 
     </div>
   )
+}
+
+return <HallOfFame history={history} points={points}/>
 };
 
 export default Quiz;
