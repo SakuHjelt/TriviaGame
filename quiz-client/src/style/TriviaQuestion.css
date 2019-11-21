@@ -8,7 +8,7 @@
 }
 
 .questionbox {
-    width: 900px;
+    width: 55%;
 }
 
 .questionTitle {
@@ -24,16 +24,24 @@
 }
 
 .checkboxLetter {
-    font-size: 3em;
+    font-size: 2.5em;
+    
 }
 
 .triviaCheckbox {
+    margin-right: 18px;
     height: 1.5em;
     width: 1.5em;
     background: black;
-    cursor: pointer;
+    cursor: crosshair; 
 }
-
+.triviaCheckbox:focus {
+    color: red;
+    background: rgb(214, 52, 52);
+    animation: blinker 1s linear infinite;
+    outline: none;
+    box-shadow: 0 0 0 10px linear-gradient(#e66465, #9198e5);;
+}
 .questionNumber {
     color: red;
     background: rgb(57, 57, 57);
@@ -60,9 +68,9 @@
 .singleQuestion {
     color: red; 
     font-size: 1.7em;
-    width: 50px;
+    width: 63%;
     top: 115%;
-    left: 50%;
+    left: 20%;
     position: absolute;
     transform: translate(-50%, -50%); 
     text-overflow: inherit;
@@ -72,4 +80,3 @@
 .answerText {
     font-size: 2em;
 }
-

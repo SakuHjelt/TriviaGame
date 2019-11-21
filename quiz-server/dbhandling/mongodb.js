@@ -53,7 +53,7 @@ function getScores(callback) {
   MongoClient.connect(url, function(err, db) {
     if (err) throw err;
     var dbo = db.db("arnold");
-    dbo.collection("hallOfFame").find({}).sort({score:-1}).limit(8).toArray(function(err, result) {
+    dbo.collection("hallOfFame").find({}).sort({score:-1}).limit(10).toArray(function(err, result) {
       if (err) throw err;
       console.log(result);
       callback(result)

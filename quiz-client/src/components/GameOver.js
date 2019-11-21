@@ -3,6 +3,7 @@ import '../style/GameOver.css'
 import GameOverImg from '../pics/gameover.jpg'
 import GameOverMusic from '../sounds/GameOverMusic.mp3';
 import Score from './Score';
+import { Link } from 'react-router-dom'
 
 const GameOver = (props) => {
     const [gameOverAudio] = useState(new Audio(GameOverMusic));
@@ -29,6 +30,7 @@ const GameOver = (props) => {
             <span className="gameoverSpan">Saku</span>
         </h1>
           </section>
+          <Link to="/quiz"><button className="playAgainButton"><span className="introSpan">|-PLAY AGAIN-|</span></button></Link>
        </div>
     )
 }

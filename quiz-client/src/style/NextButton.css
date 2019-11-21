@@ -17,3 +17,10 @@
     border: solid green;
     border-style: dashed;
   }
+
+  .nextButton:focus {
+    color: rgb(0, 185, 0);
+    animation: blinker 0.5s ;
+    outline: none;
+    box-shadow: rgb(0, 185, 0);
+}
