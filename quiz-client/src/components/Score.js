@@ -18,7 +18,7 @@ export default class Score extends Component {
     render() {
         return (
                 <table>
-                    <th>Name</th><th>Score</th>
+                    <th>NAME</th><th>SCORE</th>
                 <tbody>
                     {
                     this.state.scores.map((item) =>{
