@@ -1,5 +1,9 @@
+body {
+  background: black;
+}
+
 .quizPage {
-  color: green;
+  color: rgb(0, 185, 0);
 }
 
 .quizTitle {

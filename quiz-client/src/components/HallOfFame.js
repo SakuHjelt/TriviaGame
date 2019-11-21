@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import '../style/HallOfFame.css'
 
 const HallOfFame = ({points, history}) => {
     const [scorecard, setScorecard] = useState({name: '', score: 0})
@@ -25,22 +26,25 @@ const HallOfFame = ({points, history}) => {
 
         return (
             <div className="addScoreDiv">
-                <p>Hooray for humanity! You scored: {points}</p>
-                <p>Now save your points!</p>
+                <p>Hooray for humanity!</p>
+                <p>You have destroyed SkyNet!</p>
                 <form>
-                    <label className="fameLabel">Nick:</label>
-                    <br />
+                    <div className="nameScore">
+                    <label className="fameLabel">Term</label>
+              
                     <input className="fameInput" type='text'
                         placeholder='_ _ _ _ _ _ _ _'
                         id='fameId'
                         name="name"
                         onChange={handleNameChange}
-                        required='required' />
-                    <label className="yourScore">Your Score:</label>
+                        required='required' /> <br />
+                    <label className="yourScore">You scored: </label>
+                    {points}
+                    </div>
                     <button className="fameButton"
                         type='input'
                         onClick={handleCreateClick}
-                    >| To The Hall Of Fame |</button>
+                    >To The Hall Of Fame</button>
                 </form>
 
             </div>
