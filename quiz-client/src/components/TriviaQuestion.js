@@ -39,6 +39,7 @@ const TriviaQuestion = ({ getPoints, history, level, answers, question, rightAns
 
   getPoints(pointCounter);
 
+
   //   return (
   //     <div className="triviaQuestionDiv">
   //       SkyNet [Version &#8734;&#8734;.&#8734;.&#8734;&#8734;&#8734;&#8734;&#8734;.&#8734;&#8734;&#8734;] <br />
@@ -107,6 +108,7 @@ const TriviaQuestion = ({ getPoints, history, level, answers, question, rightAns
       <br />
       <br />
       C:\SkyNet\QuestionNumber:
+
     <span className="questionNumber">
         {questionNumber}.
     </span>
@@ -118,6 +120,12 @@ const TriviaQuestion = ({ getPoints, history, level, answers, question, rightAns
       </span>
       {/*       <Link to="/gameover">
       <button className="PixelArnold"></button></Link> */}
+
+    <br />
+    
+    <div className="allChecks">
+
+
       <br />
       <br />
       C:\SkyNet\Score:
@@ -158,8 +166,11 @@ const TriviaQuestion = ({ getPoints, history, level, answers, question, rightAns
         <span className="questionTitle">{question}</span>
       </div>
       <NextButton btnClick={checkCorrect} />
+
     </div>
-  )
+  </div>
+)
+
 }
 
 export default TriviaQuestion;
