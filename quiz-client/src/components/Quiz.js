@@ -46,9 +46,13 @@ const Quiz = ({ history }) => {
     setPoints(pointsis);
   }
 
-  history.listen( location => {
+  /* history.listen( location => {
     music.pause();
-  })
+  }) */
+
+  if (questionNumber >= 10) {
+    music.pause();
+  }
 
   if (questionNumber < 10) {
     return (

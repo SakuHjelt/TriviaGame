@@ -1,15 +1,21 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import '../style/HallOfFame.css'
-
-
+import musick from '../sounds/ScoreAddMusic.mp3';
 
 const HallOfFame = ({points, history}) => {
+    const [hallOfFameMusic] = useState(new Audio(musick));
     const [scorecard, setScorecard] = useState({name: '', score: 0})
     
     const handleNameChange = (e) => {
         setScorecard({...scorecard, [e.target.name]:e.target.value})
         console.dir(e.target.value)
     }
+
+    useEffect(() => {
+        hallOfFameMusic.play();
+    }, [hallOfFameMusic]);
+
+    history.listen(location => hallOfFameMusic.pause());
 
     const handleCreateClick = (e) => {
         e.preventDefault();
